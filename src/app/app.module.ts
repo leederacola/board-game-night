@@ -12,7 +12,7 @@ import { GamesComponent } from './games/games.component';
 
 import { RouterModule } from '../../node_modules/@angular/router';
 import { HttpClientModule }    from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+
 
 
 
