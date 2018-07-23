@@ -19,9 +19,13 @@ export class GameDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private gameService: GameService,
     private location: Location
-  ) { }
+  ) 
+  { 
+    
+    this.getGame();
+  }
 
-  gethero(): void {
+  getGame(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.gameService.getGame(id)
       .subscribe(game => this.game = game);
@@ -32,7 +36,7 @@ export class GameDetailComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.gethero();
+    
   }
 
 }

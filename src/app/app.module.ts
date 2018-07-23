@@ -17,6 +17,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MatButtonModule, MatCheckboxModule, MatGridListModule} from '@angular/material';
 import { MaterialComponent } from './material/material.component';
+import { EmptyComponent } from './empty/empty.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MaterialComponent } from './material/material.component';
     GameDetailComponent,
     MessagesComponent,
     GamesComponent,
-    MaterialComponent
+    MaterialComponent,
+    EmptyComponent
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, FormsModule, AppRoutingModule, HttpClientModule,

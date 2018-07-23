@@ -22,6 +22,7 @@ export class GamesComponent implements OnInit {
       .subscribe(games => this.games = games);
   }
 
+
   // <li> html selected assigined to component selectedGame
   // onSelectedGame(game:Game): void{
   //   this.selectedGame = game;
