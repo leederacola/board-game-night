@@ -28,13 +28,12 @@ h1 {
     color: #039be5;
   }
 
-  .column-game-list {
-    float: left;
-    width: 25%;
-}
-.column-game-detail {
-  width: 75%;
-}
+  .grid-container {
+    display: grid;
+    grid-template-columns: 25% auto ;
+    grid-template-rows: 500px;
+    padding: 10px;
+  }
 
 
 /* Clear floats after the columns */
