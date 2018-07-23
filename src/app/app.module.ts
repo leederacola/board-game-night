@@ -12,6 +12,7 @@ import { GamesComponent } from './games/games.component';
 
 import { RouterModule } from '../../node_modules/@angular/router';
 import { HttpClientModule }    from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 
 
@@ -24,7 +25,9 @@ import { HttpClientModule }    from '@angular/common/http';
     GamesComponent
   ],
   imports: [
-    BrowserModule, FormsModule, AppRoutingModule, HttpClientModule
+    BrowserModule, FormsModule, AppRoutingModule, HttpClientModule,
+    HttpClientModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
