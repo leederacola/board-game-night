@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 import { Game } from 'src/app/models/game';
 import { GAMES } from 'src/app/models/mock-games';
 
+import { MessageService } from './message.service';
 
 @Injectable({
   // this service is provided at root level, 
@@ -12,9 +14,10 @@ import { GAMES } from 'src/app/models/mock-games';
 export class GameService {
 
   //returns array of mock-games GAMES
-  getGames(): Game[] {
-    return GAMES;
+  getGames(): Observable<Game[]> {
+    this.messangeService.add("GameService: fetched Games");
+    return of (GAMES);
   }
 
-  constructor() { }
+  constructor(private messangeService: MessageService) { }
 }

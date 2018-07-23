@@ -18,7 +18,9 @@ export class DashboardComponent implements OnInit {
 
   // used gameService to set component games[]
   getGames(): void {
-    this.games = this.gameService.getGames();
+    this.gameService.getGames()
+      // names result of subscrition games and assigns to this.games property
+      .subscribe(games => this.games = games);
   }
 
   // <li> html selected assigined to component selectedGame

@@ -6,13 +6,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { FormsModule } from '@angular/forms';
 import { GameDetailComponent } from './game-detail/game-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    GameDetailComponent
+    GameDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule, FormsModule,
