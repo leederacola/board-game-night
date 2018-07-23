@@ -20,7 +20,7 @@ export class GameService {
   }
 
   getGame(id: number): Observable<Game>{
-    //this.messageService.add('GameService: fetched game id=${id}`);
+    this.messageService.add('GameService: fetched game id=${id}');
     return of(GAMES.find(game => game.id === id));
   }
 
