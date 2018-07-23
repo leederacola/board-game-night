@@ -13,8 +13,10 @@ import { GamesComponent } from './games/games.component';
 import { RouterModule } from '../../node_modules/@angular/router';
 import { HttpClientModule }    from '@angular/common/http';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-
+import {MatButtonModule, MatCheckboxModule, MatGridListModule} from '@angular/material';
+import { MaterialComponent } from './material/material.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +24,13 @@ import { HttpClientModule }    from '@angular/common/http';
     DashboardComponent,
     GameDetailComponent,
     MessagesComponent,
-    GamesComponent
+    GamesComponent,
+    MaterialComponent
   ],
   imports: [
-    BrowserModule, FormsModule, AppRoutingModule, HttpClientModule,
+    BrowserModule, BrowserAnimationsModule, FormsModule, AppRoutingModule, HttpClientModule,
     HttpClientModule,
-    HttpClientModule,
+    MatButtonModule, MatButtonModule, MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

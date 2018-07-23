@@ -1,10 +1,18 @@
-<h1>{{title}}</h1>
+<!-- <h1>{{title}}</h1>
 <nav>
     <a routerLink="/dashboard">Dashboard</a>
     <a routerLink="/games">Games</a>
 </nav>
-
 <router-outlet></router-outlet>
-<!-- <app-messages></app-messages> -->
+<app-messages></app-messages> -->
+<app-dashboard></app-dashboard>
 
+<div class="row">
+    <div class="column-game-list">
+        <app-games></app-games>
+    </div>
+    <div class="column-game-detail">
+        <router-outlet></router-outlet>
+    </div>
+</div>
 

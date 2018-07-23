@@ -21,7 +21,7 @@ export class GameDetailComponent implements OnInit {
     private location: Location
   ) { }
 
-  gethero(): void{
+  gethero(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.gameService.getGame(id)
       .subscribe(game => this.game = game);
