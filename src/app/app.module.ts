@@ -9,6 +9,7 @@ import { GameDetailComponent } from './game-detail/game-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { GamesComponent } from './games/games.component';
+
 import { RouterModule } from '../../node_modules/@angular/router';
 
 

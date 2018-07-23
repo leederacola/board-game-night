@@ -15,9 +15,14 @@ export class GameService {
 
   //returns array of mock-games GAMES
   getGames(): Observable<Game[]> {
-    this.messangeService.add("GameService: fetched Games");
+    this.messageService.add("GameService: fetched Games");
     return of (GAMES);
   }
 
-  constructor(private messangeService: MessageService) { }
+  getGame(id: number): Observable<Game>{
+    //this.messageService.add('GameService: fetched game id=${id}`);
+    return of(GAMES.find(game => game.id === id));
+  }
+
+  constructor(private messageService: MessageService) { }
 }
