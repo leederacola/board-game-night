@@ -11,6 +11,8 @@ import { AppRoutingModule } from './/app-routing.module';
 import { GamesComponent } from './games/games.component';
 
 import { RouterModule } from '../../node_modules/@angular/router';
+import { HttpClientModule }    from '@angular/common/http';
+
 
 
 @NgModule({
@@ -22,7 +24,7 @@ import { RouterModule } from '../../node_modules/@angular/router';
     GamesComponent
   ],
   imports: [
-    BrowserModule, FormsModule, AppRoutingModule,
+    BrowserModule, FormsModule, AppRoutingModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
