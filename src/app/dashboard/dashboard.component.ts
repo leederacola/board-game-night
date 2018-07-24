@@ -16,7 +16,7 @@ games: Game[] = [];
 
   getGames(): void{
     this.gameService.getGames()
-      .subscribe(games => this.games = games.slice(1,5));
+      .subscribe(games => this.games = games.slice(0,6));
   }
 
 
