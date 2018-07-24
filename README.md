@@ -1,5 +1,11 @@
 # BoardGameNight
 
+## My Notes
+### Road Blocks
+CSS taken from angular io tour of heroes as to remove focus on visuals.  
+When you know for certain that a Componentt instance will never, never, ever be re-used, you can simplify the code with the snapshot.  
+I need to subscribe to route/url (some how) then not forget to unsubscribe.  
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
 
 ## Development server

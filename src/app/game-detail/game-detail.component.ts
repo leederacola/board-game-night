@@ -19,10 +19,10 @@ export class GameDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private gameService: GameService,
     private location: Location
-  ) 
-  { 
-    
-    this.getGame();
+  ) { }
+  
+  ngOnInit() {
+    this.getGame(); 
   }
 
   getGame(): void {
@@ -35,8 +35,6 @@ export class GameDetailComponent implements OnInit {
     this.location.back();
   }
 
-  ngOnInit() {
-    
-  }
+
 
 }
