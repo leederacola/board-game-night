@@ -7,7 +7,7 @@ import { switchMap } from 'rxjs/operators';
 // my inports
 import { GameService } from 'src/app/game.service'
 import { Game } from 'src/app/models/game';
-
+import { Person } from 'src/app/models/person';
 
 
 

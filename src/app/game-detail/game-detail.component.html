@@ -1,20 +1,32 @@
 <div *ngIf="game">
-  <div class="grid-container">
+  <div class="row">
+    <div class="col-12 col-md-4">
+        <h1>{{game.title}}</h1>
+        <h4>id: {{game.id}}</h4>
+        <h4>Min Player: {{game.minPlayer}}</h4>
+        <h4>Max Player: {{game.maxPlayer}}</h4>
+        <h4>Description: {{game.description}}</h4>
+    </div>
+    <div class="col-12 col-md-8">
+        <img src="{{game.imagePath}}" class="img-fluid" alt="Responsive image" />
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- <div class="grid-container">
     <div class="column-detail">
-      <h1>{{game.title}}</h1>
-      <h3>id: {{game.id}}</h3>
-      <h3>Min Player: {{game.minPlayer}}</h3>
-      <h3>Max Player: {{game.maxPlayer}}</h3>
+      
     </div>
 
 
     <div class="column-img">
       <!-- <img class="box-art" [src]="this.imagePath"/> -->
-      <img src="{{game.imagePath}}" class="img-fluid" alt="Responsive image" />
+     
 
-    </div>
-  </div>
-</div>
+  
+
 <!-- container end -->
 
 

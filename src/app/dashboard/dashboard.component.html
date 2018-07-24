@@ -1,8 +1,16 @@
-<h3>Games</h3>
+<h1>Games</h1>
 <div class="row container-flex">
   <div *ngFor="let game of games" class="col-6 col-md-2 card"
     routerLink="/detail/{{game.id}}">
     {{game.title}}
+  </div>
+</div>
+
+<h1>Players</h1>
+<div class="row container-flex">
+  <div *ngFor="let person of players" class="col-6 col-md-2 card"
+    routerLink="">
+    {{person.name}}
   </div>
 </div>
 
