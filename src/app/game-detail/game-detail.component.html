@@ -1,23 +1,21 @@
 <div class="detail-header">
-    <h2>Game Detail</h2>
-    <h3>current route: {{idFromRoute}}</h3>
+  <h1>Game Detail</h1>
 </div>
 
 <div *ngIf="game">
   <div class="grid-container">
     <div class="column-detail">
-      <h2>{{game.title}} Details</h2>
-      <div>
-        <span>id: </span>{{game.id}}</div>
-      <div>
-        <label>name:
-          <input [(ngModel)]="game.title" placeholder="title" />
-        </label>
-      </div>
+      <h1>{{game.title}}</h1>
+      <h3>id: {{game.id}}</h3>
+      <h3>Min Player: {{game.minPlayer}}</h3>
+      <h3>Max Player: {{game.maxPlayer}}</h3>
     </div>
 
+
     <div class="column-img">
-      <img class="box-art" src="../../assets/img/bloodrage.jpg">
+      <!-- <img class="box-art" [src]="this.imagePath"/> -->
+      <img src="{{game.imagePath}}" />
+
     </div>
   </div>
 </div>

@@ -3,4 +3,5 @@ export class Game{
     title: string;
     minPlayer: number;
     maxPlayer: number;
+    imagePath?: string;
 }

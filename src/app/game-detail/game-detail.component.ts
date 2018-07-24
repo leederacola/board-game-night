@@ -20,6 +20,7 @@ export class GameDetailComponent implements OnInit {
 
   idFromRoute: number;
   @Input() game: Game;
+  
 
   constructor(
     private route: ActivatedRoute,
@@ -45,10 +46,6 @@ export class GameDetailComponent implements OnInit {
         .subscribe(game => this.game = game);
     });
   }
-
-
-
-
 
   // this works only if component will not be rerouted to!!!!!! 
   // getGame(): void {
