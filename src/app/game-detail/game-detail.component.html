@@ -1,5 +1,30 @@
+<div class="detail-header">
+    <h2>Game Detail</h2>
+    <h3>current route: {{idFromRoute}}</h3>
+</div>
 
-<h2>Game Detail</h2>
+<div *ngIf="game">
+  <div class="grid-container">
+    <div class="column-detail">
+      <h2>{{game.title}} Details</h2>
+      <div>
+        <span>id: </span>{{game.id}}</div>
+      <div>
+        <label>name:
+          <input [(ngModel)]="game.title" placeholder="title" />
+        </label>
+      </div>
+    </div>
+
+    <div class="column-img">
+      <img class="box-art" src="../../assets/img/bloodrage.jpg">
+    </div>
+  </div>
+</div>
+<!-- container end -->
+
+
+<!-- <h2>Game Detail</h2>
 
 <div class="grid-container">
   <div *ngIf="game">
@@ -19,7 +44,7 @@
   <div class="column-game-img">
     <img class="box-art" src="../../assets/img/bloodrage.jpg">
   </div>
-</div>
+</div> -->
 <!-- container end -->
 
 <!-- <div class="row">

@@ -31,10 +31,14 @@ label {
 
 .box-art{
   object-fit: cover;
+  align-content: center;
 
 }
 .grid-container{
   display: grid;
   grid-template-rows: 500px;
   grid-template-columns: 30% 70%;
+}
+.detail-header{
+  text-align: center;
 }
