@@ -18,6 +18,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatGridListModule} from '@angular/material';
 import { MaterialComponent } from './material/material.component';
 import { EmptyComponent } from './empty/empty.component';
+import { PlayersComponent } from './players/players.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { EmptyComponent } from './empty/empty.component';
     MessagesComponent,
     GamesComponent,
     MaterialComponent,
-    EmptyComponent
+    EmptyComponent,
+    PlayersComponent
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, FormsModule, AppRoutingModule, HttpClientModule,
