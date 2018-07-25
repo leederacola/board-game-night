@@ -24,5 +24,24 @@ export class GameService {
     return of(GAMES.find(game => game.id === id));
   }
 
+// TO DO:
+ /***
+   * getAllGames()
+   * gets all games from your groups List
+   */
+
+    /***
+   * getPersonsGames(id: number)
+   * gets game library from Person.Id
+   */
+
+    /***
+   * getGameNightgames()
+   * gets games of players attending
+   * filers games per player count
+   */
+
+  
+
   constructor(private messageService: MessageService) { }
 }

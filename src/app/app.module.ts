@@ -15,7 +15,7 @@ import { HttpClientModule }    from '@angular/common/http';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import {MatButtonModule, MatCheckboxModule, MatGridListModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatGridListModule, MatOptionModule, MatSelectModule} from '@angular/material';
 import { MaterialComponent } from './material/material.component';
 import { EmptyComponent } from './empty/empty.component';
 import { PlayersComponent } from './players/players.component';
@@ -34,7 +34,7 @@ import { PlayersComponent } from './players/players.component';
   imports: [
     BrowserModule, BrowserAnimationsModule, FormsModule, AppRoutingModule, HttpClientModule,
     HttpClientModule,
-    MatButtonModule, MatButtonModule, MatGridListModule
+    MatButtonModule, MatButtonModule, MatGridListModule, MatOptionModule, MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

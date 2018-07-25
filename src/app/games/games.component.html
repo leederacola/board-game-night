@@ -12,7 +12,10 @@
     <div class="games">
         <div *ngFor="let game of games">
           <a routerLink="/detail/{{game.id}}">
-          <span class="badge">{{game.id}}</span> {{game.title}}
+          <span class="badge">{{game.id}}</span> 
+          {{game.title}} 
+          <!-- <span class="badge">{{game.minPlayer}}</span>
+          <span class="badge">{{game.maxPlayer}}</span> -->
           </a>
         </div>
     </div>

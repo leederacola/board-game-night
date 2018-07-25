@@ -67,3 +67,6 @@
   .card{
     text-align: center;
   }
+  .add-to-dash{
+    float: left;
+  }
