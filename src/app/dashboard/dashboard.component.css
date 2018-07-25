@@ -82,3 +82,7 @@
   .drop-btn:hover {
     background-color: none;
   }
+.player-ct{
+  
+  float:left;
+}

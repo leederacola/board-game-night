@@ -1,24 +1,13 @@
-<!-- <h2>Games!</h2>
-<ul class="games">
-  <li *ngFor="let game of games">
-    <a routerLink="/detail/{{game.id}}">
-    <span class="badge">{{game.id}}</span> {{game.title}}
-    </a>
-  </li>
-</ul> -->
 
-<h2>Games!</h2>
+<h5>Games!</h5>
+<h5>Shared Player Count: {{playerCount}}</h5>
 <div class="vertical-menu">
     <div class="games">
         <div *ngFor="let game of games"
           routerLink="/detail/{{game.id}}">
-          <!-- <span class="badge">{{game.id}}</span>  -->
           {{game.title}} 
           <span class="badge-min">{{game.minPlayer}}</span>
           <span class="badge-max">{{game.maxPlayer}}</span>
         </div>
     </div>
 </div>
-
-
-

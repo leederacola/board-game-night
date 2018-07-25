@@ -4,7 +4,7 @@ import { Game } from 'src/app/models/game';
 import { GameService } from 'src/app/game.service';
 import { Person } from 'src/app/models/person';
 import { PersonService } from '../person.service';
-
+import {DataFriendService } from '../data-friend.service'
 
 @Component({
   selector: 'app-dashboard',
@@ -28,15 +28,20 @@ players: Person[] =[]
 attendingPlayers: Person[] =[]
 addPlayer;
 
+playerCount: number;
+
   constructor(
     private gameService: GameService,
     private personService: PersonService,
+    private dataService: DataFriendService,
   ) { }
 
   ngOnInit() {
     this.getGames();
     this.getPeople();  
+    this.dataService.currentPlayerCount.subscribe(count => this.playerCount = count);
   }
+
 
   getGames(): void {
     this.gameService.getGames()
@@ -51,6 +56,9 @@ addPlayer;
   addP(): void {
     let p = this.addPlayer;
     this.attendingPlayers.push(p);
+    let ct = this.attendingPlayers.length;
+    // use dataService to update playerCount
+    this.dataService.changePlayerCount(ct);
     //revove attending from totral player list
   }
   addG(): void {
