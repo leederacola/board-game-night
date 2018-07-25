@@ -1,27 +1,36 @@
 
-<h1>Games</h1>
-<button class ="add-to-dash">Add</button>
-<div class="row container-flex">
-  <div *ngFor="let game of games" class="col-6 col-md-2 card" routerLink="/detail/{{game.id}}">
-    {{game.title}}
-  </div>
-</div>
 
+  <h1>Games</h1>
+  <select [(ngModel)]="addGame">
+      <option *ngFor="let g of games" [ngValue]="g">{{g.title}}</option>
+    </select>
+    <button (click)="addP()">Submit</button>
+
+
+
+  
+  <div class="row container-flex">
+    <div *ngFor="let game of eventGames" class="col-6 col-md-2 card" routerLink="/detail/{{game.id}}">
+      {{game.title}}
+    </div>
+  </div>
+  
+  
+  
   <h1>Players</h1>
 
-  <mat-form-field>
-      <mat-select placeholder="Favorite food">
-        <mat-option *ngFor="let food of foods" [value]="food.value">
-          {{food.viewValue}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
+  <select [(ngModel)]="addPlayer">
+      <option *ngFor="let p of players" [ngValue]="p">{{p.name}}</option>
+    </select>
+    <button (click)="addP()">Submit</button>
+
     
   <div class="row container-flex">
-    <div *ngFor="let person of players" class="col-6 col-md-2 card" routerLink="">
+    <div *ngFor="let person of attendingPlayers" class="col-6 col-md-2 card" routerLink="">
       {{person.name}}
     </div>
   </div>
+
 
 <!-- <div class=" dash col-6 col-md-2">
     <div class="card">game</div>

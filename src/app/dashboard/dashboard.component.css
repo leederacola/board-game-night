@@ -70,3 +70,15 @@
   .add-to-dash{
     float: left;
   }
+  .drop-btn{
+    font-family: Arial;
+    background-color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: hand;
+  }
+  .drop-btn:hover {
+    background-color: none;
+  }

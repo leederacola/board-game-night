@@ -23,19 +23,24 @@ export class DashboardComponent implements OnInit {
 */
 games: Game[] = [];
 eventGames: Game[] = [];
-// remove from component with service
+addGame;
 players: Person[] =[]
 attendingPlayers: Person[] =[]
-
+addPlayer;
 
   constructor(
     private gameService: GameService,
     private personService: PersonService,
   ) { }
 
+  ngOnInit() {
+    this.getGames();
+    this.getPeople();  
+  }
+
   getGames(): void {
     this.gameService.getGames()
-      .subscribe(games => this.games = games.slice(0,6));
+      .subscribe(games => this.games = games);
   }
 
   getPeople(): void{
@@ -43,11 +48,12 @@ attendingPlayers: Person[] =[]
       .subscribe(peoples => this.players = peoples.slice(0,6));
   }
 
-
-  ngOnInit() {
-    this.getGames();
-    this.getPeople();
-    
+  addP(): void {
+    let p = this.addPlayer;
+    this.attendingPlayers.push(p);
+    //revove attending from totral player list
   }
+
+
 
 }
