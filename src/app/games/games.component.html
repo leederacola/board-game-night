@@ -10,13 +10,12 @@
 <h2>Games!</h2>
 <div class="vertical-menu">
     <div class="games">
-        <div *ngFor="let game of games">
-          <a routerLink="/detail/{{game.id}}">
-          <span class="badge">{{game.id}}</span> 
+        <div *ngFor="let game of games"
+          routerLink="/detail/{{game.id}}">
+          <!-- <span class="badge">{{game.id}}</span>  -->
           {{game.title}} 
           <span class="badge-min">{{game.minPlayer}}</span>
           <span class="badge-max">{{game.maxPlayer}}</span>
-          </a>
         </div>
     </div>
 </div>

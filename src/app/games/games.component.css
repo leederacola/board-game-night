@@ -36,11 +36,12 @@
   display: inline-block;
   font-size: small;
   color: white;
-  padding: 0.8em 0.7em 0.8em 0.7em;
+  padding: 0.3em 0.3em;
   background-color: #607D8B;
   position: relative;
   min-width: 16px;
   margin-right: .8em;
+
 }
 .games .badge-min {
 
@@ -72,6 +73,7 @@
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: .25rem;
+  margin-right: .8rem;
 }
 
 
