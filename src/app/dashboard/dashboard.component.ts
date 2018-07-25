@@ -53,6 +53,11 @@ addPlayer;
     this.attendingPlayers.push(p);
     //revove attending from totral player list
   }
+  addG(): void {
+    let g = this.addGame;
+    this.eventGames.push(g);
+    
+  }
 
 
 

@@ -1,35 +1,34 @@
 
+<h1>Games</h1>
 
-  <h1>Games</h1>
+<div class="event-add">
+
   <select [(ngModel)]="addGame">
-      <option *ngFor="let g of games" [ngValue]="g">{{g.title}}</option>
-    </select>
-    <button (click)="addP()">Submit</button>
+    <option *ngFor="let g of games" [ngValue]="g">{{g.title}}</option>
+  </select>
+  <button (click)="addG()">Submit</button>
+</div>
 
-
-
-  
-  <div class="row container-flex">
-    <div *ngFor="let game of eventGames" class="col-6 col-md-2 card" routerLink="/detail/{{game.id}}">
-      {{game.title}}
-    </div>
+<div class="row container">
+  <div *ngFor="let game of eventGames" class="col-6 col-md-2 card" routerLink="/detail/{{game.id}}">
+    {{game.title}}
   </div>
-  
-  
-  
-  <h1>Players</h1>
+</div>
 
+<h1>Players</h1>
+
+<div class="event-add">
   <select [(ngModel)]="addPlayer">
-      <option *ngFor="let p of players" [ngValue]="p">{{p.name}}</option>
-    </select>
-    <button (click)="addP()">Submit</button>
+    <option *ngFor="let p of players" [ngValue]="p">{{p.name}}</option>
+  </select>
+  <button (click)="addP()">Submit</button>
+</div>
 
-    
-  <div class="row container-flex">
-    <div *ngFor="let person of attendingPlayers" class="col-6 col-md-2 card" routerLink="">
-      {{person.name}}
-    </div>
+<div class="row container">
+  <div *ngFor="let person of attendingPlayers" class="col-6 col-md-2 card" routerLink="">
+    {{person.name}}
   </div>
+</div>
 
 
 <!-- <div class=" dash col-6 col-md-2">
@@ -229,7 +228,7 @@
     </div>
   -->
 
-      <!-- <div class=" dash col-6 col-md-2">
+<!-- <div class=" dash col-6 col-md-2">
         <div class="card">game</div>
       </div>
       <div class=" dash col-6 col-md-2">
