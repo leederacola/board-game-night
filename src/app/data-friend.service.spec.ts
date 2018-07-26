@@ -9,7 +9,7 @@ describe('DataFriendService', () => {
     });
   });
 
-  it('should be created', inject([DataFriendService], (service: DataFriendService) => {
+  it('should created', inject([DataFriendService], (service: DataFriendService) => {
     expect(service).toBeTruthy();
   }));
 });
