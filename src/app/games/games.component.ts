@@ -23,9 +23,7 @@ export class GamesComponent implements OnInit {
       // names result of subscrition games and assigns to this.games property
       .subscribe(games => this.games = games);
   }
-changePlayerCount(){
-  this.dataService.changePlayerCount(15);
-}
+
 
 
 

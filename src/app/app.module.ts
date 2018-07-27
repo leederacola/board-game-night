@@ -17,8 +17,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MatButtonModule, MatCheckboxModule, MatGridListModule, MatOptionModule, MatSelectModule, MatTab, MatTabsModule} from '@angular/material';
 import { MaterialComponent } from './material/material.component';
-import { EmptyComponent } from './empty/empty.component';
+
 import { PlayersComponent } from './players/players.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 @NgModule({
@@ -29,8 +30,9 @@ import { PlayersComponent } from './players/players.component';
     MessagesComponent,
     GamesComponent,
     MaterialComponent,
-    EmptyComponent,
-    PlayersComponent
+
+    PlayersComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, FormsModule, AppRoutingModule, HttpClientModule,

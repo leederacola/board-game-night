@@ -37,20 +37,33 @@ playerCount: number;
   ) { }
 
   ngOnInit() {
+    
     this.getGames();
-    this.getPeople();  
+    this.getPeople(); 
+    // subscribe to shared dataService for player count 
     this.dataService.currentPlayerCount.subscribe(count => this.playerCount = count);
+    this.playerCount = this.attendingPlayers.length;
+    
   }
 
-
+  // get all games from "db"
+  //adds some to event games for demo
   getGames(): void {
     this.gameService.getGames()
       .subscribe(games => this.games = games);
+      //adds some to event games for demo until db save data
+      this.eventGames.push(this.games[1]);
+      this.eventGames.push(this.games[5]);
+
+      // this breaks input link to detail component because @input game no longer exist in games list
+      // this.eventGames = this.games.splice(1,3); 
+
   }
 
   getPeople(): void{
     this.personService.getPeople()
       .subscribe(peoples => this.players = peoples.slice(0,6));
+      this.attendingPlayers = this.players.splice(0,3);
   }
 
   addP(): void {
