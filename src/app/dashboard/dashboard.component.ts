@@ -59,6 +59,24 @@ playerCount: number;
       // this.eventGames = this.games.splice(1,3); 
 
   }
+  removeGame(g: Game){
+    let i = this.eventGames.indexOf(g);
+    if (i !== -1) {
+      this.eventGames.splice(i, 1);
+  }
+  //this.players.push(g);        
+    // this.attendingPlayers.find(player => p === player);
+
+  }
+  removePlayer(p: Person){
+    let i = this.attendingPlayers.indexOf(p);
+    if (i !== -1) {
+      this.attendingPlayers.splice(i, 1);
+  }
+  this.players.push(p);        
+    // this.attendingPlayers.find(player => p === player);
+
+  }
 
   getPeople(): void{
     this.personService.getPeople()

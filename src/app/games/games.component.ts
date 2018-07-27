@@ -13,15 +13,20 @@ import { DataFriendService } from '../data-friend.service';
 
 export class GamesComponent implements OnInit {
 
-  games: Game[];
+  games: Game[] = [];
+  filteredGames: Game[] = []
   //selectedGame: Game;
   playerCount: number;
-
+  listToggle: boolean = false;
   // used gameService to set component games[]
   getGames(): void {
     this.gameService.getGames()
       // names result of subscrition games and assigns to this.games property
       .subscribe(games => this.games = games);
+  }
+
+  toggleGameList(){
+    this.listToggle = !this.listToggle;
   }
 
 

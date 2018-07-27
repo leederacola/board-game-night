@@ -12,6 +12,7 @@
 <div class="row container">
   <div *ngFor="let game of eventGames" class="col-6 col-md-2 card" routerLink="/detail/{{game.id}}">
     {{game.title}}
+    <button (click)="removeGame(game)">remove</button>
   </div>
 </div>
 
@@ -27,6 +28,7 @@
 <div class="row container">
   <div *ngFor="let person of attendingPlayers" class="col-6 col-md-2 card" routerLink="">
     {{person.name}}
+    <button (click)="removePlayer(person)">remove</button>
   </div>
 </div>
 
