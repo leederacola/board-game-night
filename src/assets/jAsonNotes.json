@@ -1,0 +1,141 @@
+{
+    "users": {
+        "1": {
+            "name": "Ryan"
+        },
+        "2": {
+            "name": "Peter"
+        },
+        "3": {
+            "name": "Mindy"
+        }
+    },
+    "games": {
+        "Blood Rage": {
+            "minPLayer": 3,
+            "maxPlayer": 5,
+            "description": "some words here",
+            "imgPath": "https://cf.geekdo-images.com/imagepage/img/op_BYsCGVw_PftIoCa-OWucsUFc=/fit-in/900x600/filters:no_upscale()/pic2439223.jpg",
+            "playTime": 2
+        },
+        "Lost Cities": {
+            "minPLayer": 3,
+            "maxPlayer": 5,
+            "description": "some words here",
+            "imgPath": "https://cf.geekdo-images.com/imagepage/img/kNOK3IkwYIeoOQAeOMhOH9U7z88=/fit-in/900x600/filters:no_upscale()/pic2606107.jpg",
+            "playTime": 2
+        },
+        "Patchwork": {
+            "minPLayer": 3,
+            "maxPlayer": 5,
+            "description": "some words here",
+            "imgPath": "https://cf.geekdo-images.com/imagepage/img/P-mb1HCtL_bAK0Knq_LR86Hxzdw=/fit-in/900x600/filters:no_upscale()/pic2270442.jpg",
+            "playTime": 2
+        },
+        "Cosmic Encounter": {
+            "minPLayer": 3,
+            "maxPlayer": 5,
+            "description": "some words here",
+            "imgPath": "https://cf.geekdo-images.com/imagepage/img/jAVGM9IeOy7dxdAr2ssJx8BbrGg=/fit-in/900x600/filters:no_upscale()/pic1521633.jpg",
+            "playTime": 2
+        },
+        "Captain Sonar": {
+            "minPLayer": 3,
+            "maxPlayer": 5,
+            "description": "some words here",
+            "imgPath": "https://cf.geekdo-images.com/imagepage/img/eBQsy-K267ZgE_fNmxsbNDKUhng=/fit-in/900x600/filters:no_upscale()/pic3013621.png",
+            "playTime": 2
+        },
+        "Codenames": {
+            "minPLayer": 3,
+            "maxPlayer": 5,
+            "description": "some words here",
+            "imgPath": "https://cf.geekdo-images.com/imagepage/img/BwJJTrofiaH0Muxuo5rv0VCmuCY=/fit-in/900x600/filters:no_upscale()/pic2582929.jpg",
+            "playTime": 2
+        },
+        "Dead of Winter": {
+            "minPLayer": 3,
+            "maxPlayer": 5,
+            "description": "some words here",
+            "imgPath": "https://cf.geekdo-images.com/imagepage/img/IoC3kSvE7fHaZV868Mf_jbpx8r8=/fit-in/900x600/filters:no_upscale()/pic3016500.jpg",
+            "playTime": 2
+        },
+        "Azul": {
+            "minPLayer": 3,
+            "maxPlayer": 5,
+            "description": "some words here",
+            "imgPath": "https://cf.geekdo-images.com/imagepage/img/mswTFqJsQ_omcKa_y1yNfFMJP6M=/fit-in/900x600/filters:no_upscale()/pic3718275.jpg",
+            "playTime": 2
+        },
+        "Inis": {
+            "minPLayer": 3,
+            "maxPlayer": 5,
+            "description": "some words here",
+            "imgPath": "https://cf.geekdo-images.com/imagepage/img/c6vFqiWZr3ix-2rMkUA0idcaOfk=/fit-in/900x600/filters:no_upscale()/pic3112623.jpg",
+            "playTime": 2
+        },
+        "Pandemic": {
+            "minPLayer": 3,
+            "maxPlayer": 5,
+            "description": "some words here",
+            "imgPath": "https://cf.geekdo-images.com/imagepage/img/3mRLkaz_shArWqExOXUS59cQowY=/fit-in/900x600/filters:no_upscale()/pic1534148.jpg",
+            "playTime": 2
+        },
+        "Smallworld": {
+            "minPLayer": 3,
+            "maxPlayer": 5,
+            "description": "some words here",
+            "imgPath": "https://cf.geekdo-images.com/imagepage/img/voiO0qFy3gEcytkQX_-ueewX2_U=/fit-in/900x600/filters:no_upscale()/pic428828.jpg",
+            "playTime": 2
+        }
+    },
+    "userLibrary": {
+        "Ryan": {
+            "1": "Bloodrage",
+            "2": "Azul",
+            "3": "Lost Cities",
+            "4": "Patchwork"
+        },
+        "Mindy": {
+            "1": "Inis",
+            "2": "Smallworld",
+            "3": "Pandemic"
+        },
+        "Peter": {
+            "1": "Dead of Winter",
+            "2": "Codenames",
+            "3": "Captain Sonar",
+            "4": "Cosmic Encounters"
+        }
+    }
+} 
+
+{
+    "games": {
+        "Blood Rage": {
+            some content
+        },
+        "Lost Cities": {
+          some content
+        }
+    },
+    "users": {
+        "1": {
+            "name": "Ryan"
+        },
+        "2": {
+            "name": "Peter"
+    },
+    "usersGames" :{
+        "ryan" :{
+            "1" : "uno",
+            "2" : "poker"
+        },
+        "matt" :{
+            "1" : "beer drinking",
+            "2" : "shot takling"
+        }
+    }
+}
+
+
