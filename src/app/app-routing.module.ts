@@ -6,15 +6,23 @@ import { DashboardComponent } from 'src/app/dashboard/dashboard.component';
 import { GameDetailComponent } from 'src/app/game-detail/game-detail.component';
 
 import { WelcomeComponent } from 'src/app/welcome/welcome.component';
+// firebase trial components
+import {FiregamecreateComponent } from './firegamecreate/firegamecreate.component'
+import {FiregamelistComponent } from './firegamelist/firegamelist.component'
+import {FiregamedetailComponent } from './firegamedetail/firegamedetail.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/welcome', pathMatch: 'full'},
+  { path: 'welcome', redirectTo: '/welcome', pathMatch: 'full'},
   { path: 'games', component: GamesComponent },
   { path: 'welcome', component: WelcomeComponent },
 
   { path: 'detail/:id', component: GameDetailComponent},
   { path: 'dashboard', component: DashboardComponent },
+
+  { path: '', redirectTo:'firegames', pathMatch: 'full'},
+  { path: 'firegames', component: FiregamelistComponent },
+  { path: 'add', component: FiregamecreateComponent },
 ];
 
 @NgModule({
