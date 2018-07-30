@@ -41,6 +41,6 @@ export const PEOPLE: Person[] = [
             { id: 4, title: "Cosmic Encounter", minPlayer: 3, maxPlayer: 6, imagePath: "https://cf.geekdo-images.com/imagepage/img/jAVGM9IeOy7dxdAr2ssJx8BbrGg=/fit-in/900x600/filters:no_upscale()/pic1521633.jpg" },
         ]
     },
-    { id: 6, name: "Guest" },
+    { id: 6, name: "James", library:[] },
     { id: 7, name: "Guest" }
 ]

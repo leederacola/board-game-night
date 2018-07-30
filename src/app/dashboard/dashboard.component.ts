@@ -52,8 +52,6 @@ playerCount: number;
     this.gameService.getGames()
       .subscribe(games => this.games = games);
       //adds some to event games for demo until db save data
-      this.eventGames.push(this.games[1]);
-      this.eventGames.push(this.games[5]);
 
       // this breaks input link to detail component because @input game no longer exist in games list
       // this.eventGames = this.games.splice(1,3); 
@@ -73,7 +71,9 @@ playerCount: number;
     if (i !== -1) {
       this.attendingPlayers.splice(i, 1);
   }
-  this.players.push(p);        
+  this.players.push(p); 
+  let ct = this.attendingPlayers.length;
+  this.dataService.changePlayerCount(ct);       
     // this.attendingPlayers.find(player => p === player);
 
   }
@@ -81,21 +81,30 @@ playerCount: number;
   getPeople(): void{
     this.personService.getPeople()
       .subscribe(peoples => this.players = peoples.slice(0,6));
-      this.attendingPlayers = this.players.splice(0,3);
   }
 
   addP(): void {
     let p = this.addPlayer;
-    this.attendingPlayers.push(p);
-    let ct = this.attendingPlayers.length;
-    // use dataService to update playerCount
-    this.dataService.changePlayerCount(ct);
-    //revove attending from totral player list
+    if (!p){
+      alert("null addPlayer: use drop down to add player. until i get proper form control");
+    }
+    else{
+      this.attendingPlayers.push(p);
+      let ct = this.attendingPlayers.length;
+      // use dataService to update playerCount
+      this.dataService.changePlayerCount(ct);
+      //revove attending from totral player list
+    };
+
   }
   addG(): void {
-    let g = this.addGame;
-    this.eventGames.push(g);
-    
+    if(!this.addGame){
+      alert("addGame null: add game with drop down please. until i get proper form control");
+    }
+    else{
+      let g = this.addGame;
+      this.eventGames.push(g);
+    } 
   }
 
 
