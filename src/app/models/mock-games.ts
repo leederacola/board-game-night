@@ -1,5 +1,7 @@
 import { Game } from 'src/app/models/game';
 
+
+
 export const GAMES: Game[] = [
     { id: 1, title: "Blood Rage", minPlayer: 2, maxPlayer: 5, imagePath:"https://cf.geekdo-images.com/imagepage/img/op_BYsCGVw_PftIoCa-OWucsUFc=/fit-in/900x600/filters:no_upscale()/pic2439223.jpg"},
     { id: 2, title: "Lost Cities", minPlayer: 2, maxPlayer: 2, imagePath:"https://cf.geekdo-images.com/imagepage/img/kNOK3IkwYIeoOQAeOMhOH9U7z88=/fit-in/900x600/filters:no_upscale()/pic2606107.jpg"},
