@@ -1,0 +1,16 @@
+<div *ngIf="game">
+  <div>
+    <label>Title: </label> {{game.title}}
+  </div>
+  <div>
+    <label>Min Player: </label> {{game.minPlayer}}
+  </div>
+  <div>
+    <label>Max PLayer: </label> {{game.maxPlayer}}
+  </div>
+ 
+ 
+  <span class="button is-small btn-danger" (click)='deleteCustomer()'>Delete</span>
+ 
+  <hr/>
+</div>

@@ -22,6 +22,9 @@ import { MaterialComponent } from './material/material.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
+import { FiregamelistComponent } from './firegamelist/firegamelist.component';
+import { FiregamedetailComponent } from './firegamedetail/firegamedetail.component';
+import { FiregamecreateComponent } from './firegamecreate/firegamecreate.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { environment } from '../environments/environment';
     MaterialComponent,
 
     PlayersComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    FiregamelistComponent,
+    FiregamedetailComponent,
+    FiregamecreateComponent
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, FormsModule, AppRoutingModule, HttpClientModule,

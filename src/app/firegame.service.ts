@@ -19,13 +19,13 @@ export class FiregameService {
     this.gamesRef.push(game);
   }
  
-  // updateGame(key: string, value: any): void {
-  //   this.gamesRef.update(key, value).catch(error => this.handleError(error));
-  // }
+  updateGame(key: string, value: any): void {
+    this.gamesRef.update(key, value).catch(error => this.handleError(error));
+  }
  
-  // deleteGame(key: string): void {
-  //   this.gamesRef.remove(key).catch(error => this.handleError(error));
-  // }
+  deleteGame(key: string): void {
+    this.gamesRef.remove(key).catch(error => this.handleError(error));
+  }
  
   getCustomersList(): AngularFireList<Game> {
     return this.gamesRef;
