@@ -17,9 +17,7 @@ export class FiregamedetailComponent implements OnInit {
   ngOnInit() {
   }
 
-  updateActive(isActive: boolean) {
-    this.fireService.updateGame(this.game.key, { active: isActive });
-  }
+v
  
   deleteCustomer() {
     this.fireService.deleteGame(this.game.key);

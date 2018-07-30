@@ -1,5 +1,7 @@
 
 <h3>Create game</h3>
+<button (click)="onSubmit()">ahhaa</button>
+<button (click)="popDb()">populate db</button>
 <div [hidden]="submitted" style="width: 300px;">
   <form (ngSubmit)="onSubmit()">
 
@@ -10,12 +12,12 @@
  
     <div class="form-group">
       <label for="age">MinPLayers</label>
-      <input type="text" class="form-control" id="age" required [(ngModel)]="game.minPLayers" name="age">
+      <input type="number" class="form-control" id="age" required [(ngModel)]="game.minPlayer" name="age">
     </div>
 
     <div class="form-group">
       <label for="age">MaxPLayers</label>
-      <input type="text" class="form-control" id="age" required [(ngModel)]="game.maxPLayers" name="age">
+      <input type="number" class="form-control" id="age" required [(ngModel)]="game.maxPlayer" name="age">
     </div>
 
     <div class="form-group">

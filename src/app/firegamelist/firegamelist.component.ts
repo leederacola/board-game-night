@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 
 import { FiregameService } from '../firegame.service';
-
+import {Game } from '../models/game';
+ 
 @Component({
   selector: 'app-firegamelist',
   templateUrl: './firegamelist.component.html',
@@ -12,7 +13,7 @@ export class FiregamelistComponent implements OnInit {
 
   constructor(private fireService: FiregameService) { }
 
-  games:any;
+  games: Game[];
 
   ngOnInit() {
     this.getGamesList();
