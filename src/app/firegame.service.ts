@@ -27,7 +27,7 @@ export class FiregameService {
     this.gamesRef.remove(key).catch(error => this.handleError(error));
   }
  
-  getCustomersList(): AngularFireList<Game> {
+  getGamesList(): AngularFireList<Game> {
     return this.gamesRef;
   }
  
