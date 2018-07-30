@@ -6,7 +6,7 @@
 <h5>Shared Player Count: {{playerCount}}</h5>
 <div class="vertical-menu">
     <div class="games">
-        <div *ngFor="let game of games"
+        <div *ngFor="let game of fireGamesList"
           routerLink="/detail/{{game.id}}">
           {{game.title}} 
           <span class="badge-min">{{game.minPlayer}}</span>
