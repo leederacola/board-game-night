@@ -1,3 +1,4 @@
-<p>
-  firegamelist works!
-</p>
+<h1>games</h1>
+<div *ngFor="let game of games" style="width: 300px;">
+  <firegamedetail [game]='game'></firegamedetail>
+</div>
