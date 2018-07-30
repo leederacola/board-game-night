@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { Game } from './models/game';
 
-import  { GAMES } from './models/mock-games'
+//import  { GAMES } from './models/mock-games'
 
 @Injectable({
   providedIn: 'root'
