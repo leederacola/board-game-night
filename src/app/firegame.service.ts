@@ -12,6 +12,7 @@ export class FiregameService {
   private dbPath = '/games';
 
   gamesRef: AngularFireList<Game> = null;
+  dynamicGameList: AngularFireList<Game> = null;
 
   constructor(private db: AngularFireDatabase) {
     this.gamesRef = db.list(this.dbPath);
@@ -20,7 +21,6 @@ export class FiregameService {
    createGame(game: Game): void {
     this.gamesRef.push(game);
   }
- 
   updateGame(key: string, value: any): void {
     this.gamesRef.update(key, value).catch(error => this.handleError(error));
   }
@@ -30,12 +30,27 @@ export class FiregameService {
   }
  
   getGamesList(): AngularFireList<Game> {
-    return this.gamesRef;
+    return this.gamesRef
+  }
+  getGamesMin(playerCt: number): AngularFireList<Game> {
+    this.dynamicGameList = this.db.list(this.dbPath, data => data.orderByChild('minPlayer').startAt(playerCt));
+    return this.dynamicGameList;
+  }
+  getGamesMax(playerCt: number): AngularFireList<Game> {
+    this.dynamicGameList = this.db.list(this.dbPath, data => data.orderByChild('maxPlayer').startAt(playerCt));
+    return this.dynamicGameList;
+  }
+
+
+
+  getGamesByTitle(title: string){
+    this.dynamicGameList = this.db.list(this.dbPath, data=> data.orderByChild('title').equalTo(title));
   }
  
-  // deleteAll(): void {
-  //   this.gamesRef.remove().catch(error => this.handleError(error));
-  // }
+
+    /***
+     *  
+     */
  
   private handleError(error) {
     console.log(error);

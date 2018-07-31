@@ -13,14 +13,13 @@ import {FiregamedetailComponent } from './firegamedetail/firegamedetail.componen
 
 
 const routes: Routes = [
-  { path: 'welcome', redirectTo: '/welcome', pathMatch: 'full'},
+  { path: '', redirectTo: '/welcome', pathMatch: 'full'},
   { path: 'games', component: GamesComponent },
   { path: 'welcome', component: WelcomeComponent },
 
   { path: 'detail/:id', component: GameDetailComponent},
   { path: 'dashboard', component: DashboardComponent },
 
-  { path: '', redirectTo:'firegames', pathMatch: 'full'},
   { path: 'firegames', component: FiregamelistComponent },
   { path: 'add', component: FiregamecreateComponent },
 ];

@@ -19,7 +19,7 @@ export class GamesComponent implements OnInit {
   filteredGames: Game[] = []
   //selectedGame: Game;
   playerCount: number;
-  listToggle: boolean = false;
+  
 
   fireGamesList: Game[] = [];
 
@@ -31,8 +31,8 @@ export class GamesComponent implements OnInit {
   
     ngOnInit() {
       this.getGamesList();
-      // this.gameService.getGames()
-      //   .subscribe(games => this.games = games);  
+      this.gameService.getGames()
+        .subscribe(games => this.games = games);  
 
       this.dataService.currentPlayerCount.subscribe(ct => this.playerCount = ct);
     }
@@ -41,8 +41,8 @@ export class GamesComponent implements OnInit {
 
   // used gameService to set component games[]
   getGames(): void {
-    //this.gameService.getGames().subscribe(games => this.games = games);
-      // names result of subscrition games and assigns to this.games property
+    this.gameService.getGames().subscribe(games => this.games = games);
+      //names result of subscrition games and assigns to this.games property
       
   }
   getGamesList() {
@@ -54,11 +54,29 @@ export class GamesComponent implements OnInit {
     ).subscribe(games => {
       this.fireGamesList = games;
     });
+
+
   }
  
 
-  toggleGameList(){
-    this.listToggle = !this.listToggle;
+  gamesByCtMin(){
+    this.fireGameService.getGamesMin(this.playerCount).snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
+      )
+    ).subscribe(games => {
+      this.fireGamesList = games;
+    });
+  }
+
+  gamesByCtMax(){
+    this.fireGameService.getGamesMax(this.playerCount).snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
+      )
+    ).subscribe(games => {
+      this.fireGamesList = games;
+    });
   }
 
 
