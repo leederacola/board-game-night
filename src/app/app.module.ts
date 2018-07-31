@@ -17,7 +17,7 @@ import { GamesComponent } from './games/games.component';
 
 // angular material
 import {MatButtonModule, MatCheckboxModule, MatGridListModule, MatOptionModule, MatSelectModule, MatTab, MatTabsModule} from '@angular/material';
-import { MaterialComponent } from './material/material.component';
+
 // firebase
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -33,7 +33,6 @@ import { FiregamecreateComponent } from './firegamecreate/firegamecreate.compone
     GameDetailComponent,
     MessagesComponent,
     GamesComponent,
-    MaterialComponent,
 
     PlayersComponent,
     WelcomeComponent,
