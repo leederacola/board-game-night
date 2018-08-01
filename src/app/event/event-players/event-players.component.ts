@@ -15,7 +15,9 @@ export class EventPlayersComponent implements OnInit {
   allPlayers: Player[] = [];
   eventPlayers: Player[] = [];
 
-  constructor(private playerService: PlayerService) { }
+  constructor(private playerService: PlayerService) { 
+
+  }
 
   ngOnInit() {
     this.getAllPlayers();
