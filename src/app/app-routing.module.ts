@@ -7,9 +7,7 @@ import { GameDetailComponent } from 'src/app/game-detail/game-detail.component';
 
 import { WelcomeComponent } from 'src/app/welcome/welcome.component';
 // firebase trial components
-import {FiregamecreateComponent } from './firegamecreate/firegamecreate.component'
-import {FiregamelistComponent } from './firegamelist/firegamelist.component'
-import {FiregamedetailComponent } from './firegamedetail/firegamedetail.component';
+
 
 
 const routes: Routes = [
@@ -20,8 +18,6 @@ const routes: Routes = [
   { path: 'detail/:key', component: GameDetailComponent},
   { path: 'dashboard', component: DashboardComponent },
 
-  { path: 'firegames', component: FiregamelistComponent },
-  { path: 'add', component: FiregamecreateComponent },
 ];
 
 @NgModule({

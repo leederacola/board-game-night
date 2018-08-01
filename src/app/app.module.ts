@@ -22,9 +22,7 @@ import {MatButtonModule, MatCheckboxModule, MatGridListModule, MatOptionModule, 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
-import { FiregamelistComponent } from './firegamelist/firegamelist.component';
-import { FiregamedetailComponent } from './firegamedetail/firegamedetail.component';
-import { FiregamecreateComponent } from './firegamecreate/firegamecreate.component';
+
 import { TrialComponent } from './trial/trial/trial.component';
 
 @NgModule({
@@ -37,9 +35,7 @@ import { TrialComponent } from './trial/trial/trial.component';
 
     PlayersComponent,
     WelcomeComponent,
-    FiregamelistComponent,
-    FiregamedetailComponent,
-    FiregamecreateComponent,
+
     TrialComponent
   ],
   imports: [
