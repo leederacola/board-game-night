@@ -4,7 +4,7 @@ import { map } from 'rxjs/operators';
 import { Game } from 'src/app/models/game';
 import { GameService } from 'src/app/game.service';
 import { DataFriendService } from '../data-friend.service';
-import { FiregameService } from '../firegame.service';
+import { GameListService } from '../services/game-list.service';
 
 @Component({
   selector: 'app-games',
@@ -26,7 +26,7 @@ export class GamesComponent implements OnInit {
     // game service is injected into the dashboard component and can be used
     constructor(
       private gameService: GameService,
-      private fireGameService: FiregameService,
+      private fireGameService: GameListService,
       private dataService: DataFriendService) { }
   
     ngOnInit() {
@@ -35,12 +35,6 @@ export class GamesComponent implements OnInit {
     }
     
 
-
-  // used gameService to set component games[]
-  // getGames(): void {
-  //   this.gameService.getGames().subscribe(games => this.games = games);
-  //     //names result of subscrition games and assigns to this.games property  
-  // }
 
   getGamesList() {
     // Use snapshotChanges().map() to store the key
