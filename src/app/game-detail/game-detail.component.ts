@@ -5,10 +5,10 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
 import { switchMap } from 'rxjs/operators';
 // my inports
-import { GameService } from 'src/app/game.service'
-import { Game } from 'src/app/models/game';
 import { Person } from 'src/app/models/person';
-import { FiregameService } from '../firegame.service';
+import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
+import { Game } from 'src/app/models/game';
+import { Observable } from 'rxjs';
 
 
 
@@ -17,60 +17,59 @@ import { FiregameService } from '../firegame.service';
   templateUrl: './game-detail.component.html',
   styleUrls: ['./game-detail.component.css']
 })
+
+
 export class GameDetailComponent implements OnInit {
 
-  routeKey: string;
+  
   @Input() game: Game;
-  games: Game[] = [];
+  path: string;
+  key: string
+  itemRef: AngularFireObject<Game>; //db ref to 'item
+  item: Observable<Game>; // retrieved 'item from db'
+  //db: AngularFireDatabase;
+  
 
   constructor(
     private route: ActivatedRoute,
-    private gameService: GameService,
-    private fireGameService: FiregameService,
-    private location: Location
-  ) { }
+    private location: Location,
+    db: AngularFireDatabase
+  ) {
+
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      this.key = (params.get('key'));
+      this.path = '/games/' + this.key;
+      console.log("path: " + this.path);
+    });
+
+      this.itemRef = db.object(this.path);
+      // set item to obserable
+      this.item = this.itemRef.valueChanges();
+      // subscribe to obserable set to Game
+      this.item.subscribe(g => this.game = g);
+   }
 
   ngOnInit() {
-    this.getGame();
+   // this.getGame();
   }
 
-  /***
- * getGames() subscribes to paramMap(obserable) -> get 'id' from ulr/route
- * then calls gameService getGame() with new id from paramMap
- */
-  getGame(): void {
-    
-    this.route.paramMap.subscribe((params: ParamMap) => {
-      let key = (params.get('key'));
-      key = key.slice(1,key.length);
-      this.routeKey = key;
 
-      // this.fireGameService.getGame(key).snapshotChanges().pipe(
-      //   map(changes =>
-      //     changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
-      //   )
-      // ).subscribe(games => {
-      //   this.games = games;
-      // });
-      // this.game = this.games[0];
-      // console.log(this.game.key);
-      // this.firegameService.getGame(this.routeKey).snapshotChanges().subscribe(game => this.games = game);
-      // //get new id
-      // //call gaemService
-      // this.gameService.getGame(this.idFromRoute)
-      //   .subscribe(game => this.game = game);
-    });
-  }
-
-  // this works only if component will not be rerouted to!!!!!! 
   // getGame(): void {
-  //   const id = +this.route.snapshot.paramMap.get('id');
-  //   this.gameService.getGame(id)
-  //     .subscribe(game => this.game = game);
-  // }
+  //   //get key from route param
+  //   this.route.paramMap.subscribe((params: ParamMap) => {
+  //     let key = (params.get('key'));
+  //     this.routeKey = key;
+
+  //     let path = '/games/' + key;
+  //     console.log("path: " + path );
+  //     this.itemRef = this.db.object(path);
+  //     // set item to obserable
+  //     this.item = this.itemRef.valueChanges();
+  //     // subscribe to obserable set to Game
+  //     this.item.subscribe(g => this.game = g);
+  
+  //   });
+
+  }
 
 
-
-
-
-}
