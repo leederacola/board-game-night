@@ -10,7 +10,7 @@ import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
 import { Game } from 'src/app/models/game';
 import { Observable } from 'rxjs';
 
-
+import { GameDetailService} from 'src/app/services/game-detail.service';
 
 @Component({
   selector: 'app-game-detail',
@@ -24,51 +24,38 @@ export class GameDetailComponent implements OnInit {
   
   @Input() game: Game;
   path: string;
-  key: string
+  key: string;
   itemRef: AngularFireObject<Game>; //db ref to 'item
   item: Observable<Game>; // retrieved 'item from db'
-  //db: AngularFireDatabase;
+ 
   
 
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    db: AngularFireDatabase
-  ) {
+    private detailService: GameDetailService,
+  ) {}
 
+    /***GetGame()
+      * subscribes to url param changes
+      * uses url key to call game-detail service getGame()
+      * getGame() returns obserable game
+      * subscribes to returned obserable<Game>
+      */
+   getGame(){
+    //get param and path
     this.route.paramMap.subscribe((params: ParamMap) => {
-      this.key = (params.get('key'));
-      this.path = '/games/' + this.key;
-      console.log("path: " + this.path);
+      this.path = '/games/' + (params.get('key'));
+      // call getGame, subscribe
+       this.item =  this.detailService.getGame(this.path);
+       this.item.subscribe( g => this.game = g);
     });
-
-      this.itemRef = db.object(this.path);
-      // set item to obserable
-      this.item = this.itemRef.valueChanges();
-      // subscribe to obserable set to Game
-      this.item.subscribe(g => this.game = g);
    }
 
   ngOnInit() {
-   // this.getGame();
+   this.getGame();
   }
 
-
-  // getGame(): void {
-  //   //get key from route param
-  //   this.route.paramMap.subscribe((params: ParamMap) => {
-  //     let key = (params.get('key'));
-  //     this.routeKey = key;
-
-  //     let path = '/games/' + key;
-  //     console.log("path: " + path );
-  //     this.itemRef = this.db.object(path);
-  //     // set item to obserable
-  //     this.item = this.itemRef.valueChanges();
-  //     // subscribe to obserable set to Game
-  //     this.item.subscribe(g => this.game = g);
-  
-  //   });
 
   }
 

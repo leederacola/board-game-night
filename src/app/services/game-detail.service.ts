@@ -11,13 +11,20 @@ export class GameDetailService {
   itemRef: AngularFireObject<Game>;
   item: Observable<Game>;
   game: Game = new Game();
-  constructor(db: AngularFireDatabase) {
+
+
+  constructor(private db: AngularFireDatabase) {
     // find in db
-    this.itemRef = db.object('/games/-LIgMgN7omCxJ8z9VBfm');
+  }
+
+  getGame(path: string): Observable<Game>{
+    console.log("inside detail service");
+    this.itemRef = this.db.object(path);
     // set item to obserable
     this.item = this.itemRef.valueChanges();
     // subscribe to obserable set to Game
-    this.item.subscribe(g => this.game = g);
-
+    console.log("end detail service");
+    return this.item
+    
   }
 }
