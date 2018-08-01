@@ -11,7 +11,9 @@ export class PlayerService {
   playerRef: AngularFireList<Player> = null;
   playerToAdd: Player;
 
-  constructor(private db: AngularFireDatabase) { }
+  constructor(private db: AngularFireDatabase) {
+    this.playerRef = db.list(this.dbpath);
+   }
 
   getAllPlayers(): AngularFireList<Player> {
     this. playerRef = this.db.list(this.dbpath, data => data.orderByChild('name'));
