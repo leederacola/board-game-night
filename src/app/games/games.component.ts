@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { map } from 'rxjs/operators';
 import { Game } from 'src/app/models/game';
-import { GameService } from 'src/app/game.service';
+
 import { DataFriendService } from '../data-friend.service';
 import { GameListService } from '../services/game-list.service';
 
@@ -25,7 +25,7 @@ export class GamesComponent implements OnInit {
 
     // game service is injected into the dashboard component and can be used
     constructor(
-      private gameService: GameService,
+
       private fireGameService: GameListService,
       private dataService: DataFriendService) { }
   

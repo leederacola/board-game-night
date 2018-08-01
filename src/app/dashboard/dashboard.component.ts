@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Game } from 'src/app/models/game';
-import { GameService } from 'src/app/game.service';
+
 import { Person } from 'src/app/models/person';
 import { PersonService } from '../person.service';
 import {DataFriendService } from '../data-friend.service'
@@ -13,14 +13,7 @@ import {DataFriendService } from '../data-friend.service'
 })
 export class DashboardComponent implements OnInit {
  
-/*** FUTURE
- * groupGames: Game[] = []; - all games in db (game night group all games)
- * selectedPlayerGames: Game[] = []; - view specific user library
- * gameNightFilteredGames: Game[] = []; - filtered players attending libraries and player counts
- * 
- * allPlayers: Person[];
- * eventPeople: Person[];
-*/
+
 games: Game[] = [];
 eventGames: Game[] = [];
 addGame;
@@ -31,9 +24,10 @@ addPlayer;
 playerCount: number;
 
   constructor(
-    private gameService: GameService,
+
     private personService: PersonService,
     private dataService: DataFriendService,
+
   ) { }
 
   ngOnInit() {
@@ -49,14 +43,8 @@ playerCount: number;
   // get all games from "db"
   //adds some to event games for demo
   getGames(): void {
-    this.gameService.getGames()
-      .subscribe(games => this.games = games);
-      //adds some to event games for demo until db save data
-
-      // this breaks input link to detail component because @input game no longer exist in games list
-      // this.eventGames = this.games.splice(1,3); 
-
   }
+  
   removeGame(g: Game){
     let i = this.eventGames.indexOf(g);
     if (i !== -1) {

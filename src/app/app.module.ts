@@ -22,8 +22,11 @@ import {MatButtonModule, MatCheckboxModule, MatGridListModule, MatOptionModule, 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
-
 import { TrialComponent } from './trial/trial/trial.component';
+import { EventPlayersComponent } from './event/event-players/event-players.component';
+import { EventGamesComponent } from './event/event-games/event-games.component';
+import { EventMainComponent } from './event/event-main/event-main.component';
+
 
 @NgModule({
   declarations: [
@@ -35,8 +38,14 @@ import { TrialComponent } from './trial/trial/trial.component';
 
     PlayersComponent,
     WelcomeComponent,
+    EventMainComponent,
 
-    TrialComponent
+    EventPlayersComponent,
+    EventGamesComponent,
+
+    TrialComponent,
+
+  
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, FormsModule, AppRoutingModule, HttpClientModule,
