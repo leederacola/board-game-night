@@ -1,0 +1,11 @@
+  
+  
+  private dbPath = '/playerGames/ {playerKey}  ';
+  refToGameKeysByPlayer: AngularFireList<any> = null;
+
+    constructor(private db: AngularFireDatabase) {
+   }
+
+   getGamesByPlayer(): AngularFireList<any> {
+       
+    this.gamesRef =this.db.list(this.dbPath, data => data.orderByKey();

@@ -10,7 +10,6 @@ import { Observable } from 'rxjs';
 })
 export class TrialComponent implements OnInit {
 
-
   itemRef: AngularFireObject<Game>;
   item: Observable<Game>;
   game: Game = new Game();
@@ -30,3 +29,5 @@ export class TrialComponent implements OnInit {
   }
 
 }
+
+
