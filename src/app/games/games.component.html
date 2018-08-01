@@ -8,7 +8,7 @@
 <div class="vertical-menu">
     <div class="games">
         <div *ngFor="let game of fireGamesList"
-          routerLink="/detail/{{game.id}}">
+          routerLink="/detail/{{game.key}}">
           {{game.title}} 
           <span class="badge-min">{{game.minPlayer}}</span>
           <span class="badge-max">{{game.maxPlayer}}</span>

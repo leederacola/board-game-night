@@ -25,6 +25,7 @@ import { environment } from '../environments/environment';
 import { FiregamelistComponent } from './firegamelist/firegamelist.component';
 import { FiregamedetailComponent } from './firegamedetail/firegamedetail.component';
 import { FiregamecreateComponent } from './firegamecreate/firegamecreate.component';
+import { TrialComponent } from './trial/trial/trial.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { FiregamecreateComponent } from './firegamecreate/firegamecreate.compone
     WelcomeComponent,
     FiregamelistComponent,
     FiregamedetailComponent,
-    FiregamecreateComponent
+    FiregamecreateComponent,
+    TrialComponent
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, FormsModule, AppRoutingModule, HttpClientModule,

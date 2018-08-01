@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { map } from 'rxjs/operators';
 
+import { map } from 'rxjs/operators';
 import { Game } from 'src/app/models/game';
 import { GameService } from 'src/app/game.service';
 import { DataFriendService } from '../data-friend.service';
@@ -31,20 +31,17 @@ export class GamesComponent implements OnInit {
   
     ngOnInit() {
       this.getGamesList();
-      this.gameService.getGames()
-        .subscribe(games => this.games = games);  
-
       this.dataService.currentPlayerCount.subscribe(ct => this.playerCount = ct);
     }
     
 
 
   // used gameService to set component games[]
-  getGames(): void {
-    this.gameService.getGames().subscribe(games => this.games = games);
-      //names result of subscrition games and assigns to this.games property
-      
-  }
+  // getGames(): void {
+  //   this.gameService.getGames().subscribe(games => this.games = games);
+  //     //names result of subscrition games and assigns to this.games property  
+  // }
+
   getGamesList() {
     // Use snapshotChanges().map() to store the key
     this.fireGameService.getGamesList().snapshotChanges().pipe(

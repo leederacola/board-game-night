@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'games', component: GamesComponent },
   { path: 'welcome', component: WelcomeComponent },
 
-  { path: 'detail/:id', component: GameDetailComponent},
+  { path: 'detail/:key', component: GameDetailComponent},
   { path: 'dashboard', component: DashboardComponent },
 
   { path: 'firegames', component: FiregamelistComponent },
