@@ -1,0 +1,22 @@
+<h3>Create Player</h3>
+<div>
+  <form>
+    <div class="form-group">
+      <label for="name">player name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="player.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="age">imgUrl filler</label>
+      <input type="text" class="form-control" id="img" required [(ngModel)]="player.imgPath" name="img">
+    </div>
+<button (click)="createPlayer()">add new</button>
+  </form>
+</div>
+
+<ul>
+  <li *ngFor="let p of allPlayers">
+    {{ p.name }}
+    <!-- <img class="profile-img" src="{{p.imgPath}}"> -->
+  </li>
+</ul> 

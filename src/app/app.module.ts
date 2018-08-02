@@ -26,6 +26,8 @@ import { TrialComponent } from './trial/trial/trial.component';
 import { EventPlayersComponent } from './event/event-players/event-players.component';
 import { EventGamesComponent } from './event/event-games/event-games.component';
 import { EventMainComponent } from './event/event-main/event-main.component';
+import { GamecrudComponent } from './crud/gamecrud/gamecrud.component';
+import { PlayercrudComponent } from './crud/playercrud/playercrud.component';
 
 
 @NgModule({
@@ -44,6 +46,10 @@ import { EventMainComponent } from './event/event-main/event-main.component';
     EventGamesComponent,
 
     TrialComponent,
+
+    GamecrudComponent,
+
+    PlayercrudComponent,
 
   
   ],

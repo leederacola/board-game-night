@@ -1,0 +1,28 @@
+<h3>Create game</h3>
+<div>
+  <form>
+    <div class="form-group">
+      <label for="name"></label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="game.title" name="name">
+    </div>
+    <div class="form-group">
+      <label for="name"></label>
+      <input type="number" class="form-control" id="name" required [(ngModel)]="game.minPlayer" name="name">
+    </div>
+    <div class="form-group">
+      <label for="name"></label>
+      <input type="number" class="form-control" id="name" required [(ngModel)]="game.maxPlayer" name="name">
+    </div>
+    <div class="form-group">
+      <label for="name"></label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="game.description" name="name">
+    </div>
+    <div class="form-group">
+      <label for="name"></label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="game.imagePath" name="name">
+    </div>
+  
+<button (click)="createGame()">add new</button>
+  </form>
+</div>
+
