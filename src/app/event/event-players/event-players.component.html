@@ -1,22 +1,32 @@
-<h3>Create Player</h3>
-<div>
-  <form>
-    <div class="form-group">
-      <label for="name">player name</label>
-      <input type="text" class="form-control" id="name" required [(ngModel)]="player.name" name="name">
-    </div>
+<div class="container">
+  <div class="col">
+    <h1>Event Players</h1>
+    <button>Add Player</button>
+  </div>
+  <div class=col>
+    <div class="card-deck">
 
-    <div class="form-group">
-      <label for="age">imgUrl filler</label>
-      <input type="text" class="form-control" id="img" required [(ngModel)]="player.imgPath" name="img">
+      <div class="card">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+        </div>
+      </div>
+
     </div>
-<button (click)="createPlayer()">add new</button>
-  </form>
+  </div>
 </div>
-
-<ul>
-  <li *ngFor="let p of allPlayers">
-    {{ p.name }}
-    <!-- <img class="profile-img" src="{{p.imgPath}}"> -->
-  </li>
-</ul> 

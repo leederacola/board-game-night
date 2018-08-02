@@ -1,11 +1,11 @@
 <div class="row">
-  <div class="col">
+  <div class="col-3">
     <div>
         Event Details
     </div>
     <button class="btn">Pending/New Toggle</button>
-    <button class="btn">Event Games</button>
-    <button class="btn">Players</button>
+    <button [routerLink]="[{ outlets: { eventRouter: ['eventGames'] } }]" class="btn">Event Games</button>
+    <button [routerLink]="[{ outlets: { eventRouter: ['eventPlayers'] } }]" class="btn">Players</button>
     <p> Date:</p>
     <p> Location:</p>
     <p> Top Game:</p>
@@ -13,8 +13,9 @@
 
   </div>
   <div class="col">
-   <p> router outlet for Event PLayer & Event Games</p>
+    <router-outlet name="eventRouter"></router-outlet>
+   <!-- <p> router outlet for Event PLayer & Event Games</p>
    <p>event players - add players to selected event - some pic grid maybe</p>
-   <p>event games - show suggested games by attendees - some box art grid maybe?</p>
+   <p>event games - show suggested games by attendees - some box art grid maybe?</p> -->
   </div>
 </div>
