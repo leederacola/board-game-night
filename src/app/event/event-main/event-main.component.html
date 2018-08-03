@@ -1,11 +1,27 @@
-<div class="row">
+
+
+<div>
+  <select [(ngModel)]="selectedEvent">
+    <option *ngFor="let event of eventList" [ngValue]="event">{{event.title}}</option>
+  </select>
+</div>
+
+
+<ul>
+  <li>{{selectedEvent.title}}</li>
+  <li>{{selectedEvent.date}}</li>
+  <li>{{selectedEvent.time}}</li>
+  <li>{{selectedEvent.notes}}</li>
+</ul>
+
+<!-- <div class="row">
   <div class="col-3">
     <div>
         Event Details
     </div>
-    <button class="btn">Pending/New Toggle</button>
-    <button [routerLink]="[{ outlets: { eventRouter: ['eventGames'] } }]" class="btn">Event Games</button>
-    <button [routerLink]="[{ outlets: { eventRouter: ['eventPlayers'] } }]" class="btn">Players</button>
+    <button class="btn" (click)="createEventKey()" >Pending/New Toggle</button>
+    <button  class="btn">Event Games</button>
+    <button  class="btn">Players</button>
     <p> Date:</p>
     <p> Location:</p>
     <p> Top Game:</p>
@@ -13,9 +29,40 @@
 
   </div>
   <div class="col">
-    <router-outlet name="eventRouter"></router-outlet>
-   <!-- <p> router outlet for Event PLayer & Event Games</p>
-   <p>event players - add players to selected event - some pic grid maybe</p>
-   <p>event games - show suggested games by attendees - some box art grid maybe?</p> -->
+    <!-- old way with second named router cant use parent to child data sharing? -->
+    <!-- <router-outlet name="eventRouter"></router-outlet> -->
+    <!--
+    <app-event-games></app-event-games>
+    <app-event-players></app-event-players>
+ 
   </div>
+</div> -->
+
+<!-- 
+<h3>Create event</h3>
+<div>
+  <form>
+    <div class="form-group">
+      <label for="name">event title</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="newEvent.title" name="name">
+    </div>
+    <div class="form-group">
+        <label for="name">data</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="newEvent.date" name="name">
+      </div>
+      <div class="form-group">
+          <label for="name">time</label>
+          <input type="text" class="form-control" id="name" required [(ngModel)]="newEvent.time" name="name">
+        </div>
+        <div class="form-group">
+            <label for="name">notes</label>
+            <input type="text" class="form-control" id="name" required [(ngModel)]="newEvent.notes" name="name">
+          </div>
+
+
+<button (click)="createEventKey()">add new</button>
+  </form>
 </div>
+
+ -->
+
