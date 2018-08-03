@@ -24,7 +24,7 @@ export class GameDetailService {
     this.item = this.itemRef.valueChanges();
     // subscribe to obserable set to Game
     console.log("end detail service");
-    return this.item
+    return this.item;
     
   }
 }

@@ -5,6 +5,7 @@ import { Event } from 'src/app/models/event';
 import { Game } from 'src/app/models/game';
 import { EventserviceService } from '../../services/eventservice.service';
 import { map } from '../../../../node_modules/rxjs/operators';
+import { PlayerService } from '../../services/player.service';
 
 
 @Component({
@@ -16,16 +17,16 @@ export class EventMainComponent implements OnInit {
 
   eventList: Event [] = [];
   newEvent: Event = new Event();
-
   player: Player;
   playerList: Player[] = [];
-
   gameList: Game [] = [];
-
   selectedEvent: Event;
 
 
-  constructor(private eventService: EventserviceService) {
+  constructor(
+    private eventService: EventserviceService,
+    playerService: PlayerService
+  ) {
     this.getEventList();
   }
 
@@ -46,8 +47,16 @@ export class EventMainComponent implements OnInit {
     });
   };
 
-  selectEvent(){
+  getPlayerKeysFromEvent(){
+    let pKeys = this.selectedEvent.playerKeys;
+    pKeys.forEach( function (key){
+      this.playerList.push(key);
+    })
+  }
 
+
+
+  selectEvent(){
   }
 
   

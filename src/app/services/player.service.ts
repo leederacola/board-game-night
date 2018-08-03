@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Player} from 'src/app/models/player';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database';
+import { Observable } from '../../../node_modules/rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +9,14 @@ import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angular
 export class PlayerService {
 
   private dbpath = 'players';
+  // for player list
   playerRef: AngularFireList<Player> = null;
-  playerToAdd: Player;
+  // for singular player
+  itemRef: AngularFireObject<Player>;
+  item: Observable<Player>;
+
+
+
 
   constructor(private db: AngularFireDatabase) {
     this.playerRef = db.list(this.dbpath);
@@ -18,6 +25,12 @@ export class PlayerService {
   getAllPlayers(): AngularFireList<Player> {
     this. playerRef = this.db.list(this.dbpath, data => data.orderByChild('name'));
     return this.playerRef;
+  }
+
+  getPlayer(path: string): Observable<Player>{
+    this.itemRef = this.db.object(path);
+    this.item = this.itemRef.valueChanges();
+    return this.item;
   }
 
   createPlayer(player: Player): void {
