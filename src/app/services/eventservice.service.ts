@@ -17,7 +17,7 @@ export class EventserviceService {
   // newEvent: Event = new Event();
   private dbPath = 'events'
   eventRef: AngularFireList<Event> = null;
-
+  eventPlayerRef: AngularFireList<string> = null;
   
   constructor(private db: AngularFireDatabase) {
     this.eventRef = db.list(this.dbPath);
@@ -34,6 +34,11 @@ export class EventserviceService {
   //    this.eventItem = this.eventref.valueChanges();
   //    return this.eventItem;
   //  }
+
+  getPlayersFromEvent(): AngularFireList<string>{
+    this.eventPlayerRef = this.db.list('events', data => data.child('players'));
+    return this.eventPlayerRef;
+  }
 
    createEvent(e: Event): void {
      this.eventRef.push(e);

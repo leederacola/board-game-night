@@ -21,13 +21,14 @@ export class EventMainComponent implements OnInit {
   playerList: Player[] = [];
   gameList: Game [] = [];
   selectedEvent: Event;
-
+keys: any;
 
   constructor(
     private eventService: EventserviceService,
-    playerService: PlayerService
+    playerService: PlayerService,
   ) {
     this.getEventList();
+    this.getPlayerKeysFromEvent();
   }
 
   createEventKey(){
@@ -48,16 +49,18 @@ export class EventMainComponent implements OnInit {
   };
 
   getPlayerKeysFromEvent(){
-    let pKeys = this.selectedEvent.playerKeys;
-    pKeys.forEach( function (key){
-      this.playerList.push(key);
-    })
+    this.eventService.getPlayersFromEvent().snapshotChanges().pipe(
+      map(changes =>
+      changes.map(c =>({ key: c.payload.key }))
+    )
+  ).subscribe(player => {
+    this.keys = player;
+  });
+ 
   }
 
 
-
-  selectEvent(){
-  }
+  selectEvent(){}
 
   
 

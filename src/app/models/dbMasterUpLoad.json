@@ -254,3 +254,29 @@
         }
     }
 }
+
+{
+    "events": {
+        "key": {
+            "data": "some data",
+            "players": {
+                "playerKey": true,
+                "playerKey2": true
+            }
+        }
+    },
+    "players": {
+        "playerKey": {
+            "name": "Ryan",
+            "gameLibrary": {
+                "gameKey": {
+                    "description": "some text",
+                    "title": "Blood Rage"
+                },
+                "gameKey": {
+                    "description": "some text",
+                    "title": "Pandemic"
+                },
+            }
+        }
+}
