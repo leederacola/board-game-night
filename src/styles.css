@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 /* Master Styles */
 h1 {
@@ -13,7 +13,7 @@ h1 {
     font-weight: lighter;
   }
   body {
-    margin: 2em;
+    margin: 0px;
   }
   body, input[text], button {
     color: #888;

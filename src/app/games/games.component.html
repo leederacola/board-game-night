@@ -1,10 +1,10 @@
 
-<h5>Games!</h5>
+<h5>My Games</h5>
 <button (click)="getGamesList()"> all</button>
 <button (click)="gamesByCtMin()"> filter Min</button>
 <button (click)="gamesByCtMax()"> filter Max</button>
 
-<h5>Shared Player Count: {{playerCount}}</h5>
+<!-- <h5>Shared Player Count: {{playerCount}}</h5> -->
 <div class="vertical-menu">
     <div class="games">
         <div *ngFor="let game of fireGamesList"

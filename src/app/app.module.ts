@@ -14,10 +14,8 @@ import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { GamesComponent } from './games/games.component';
 
-
 // angular material
-import {MatButtonModule, MatCheckboxModule, MatGridListModule, MatOptionModule, MatSelectModule, MatTab, MatTabsModule} from '@angular/material';
-
+import {MatToolbarModule} from '@angular/material';
 // firebase
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -28,6 +26,7 @@ import { EventGamesComponent } from './event/event-games/event-games.component';
 import { EventMainComponent } from './event/event-main/event-main.component';
 import { GamecrudComponent } from './crud/gamecrud/gamecrud.component';
 import { PlayercrudComponent } from './crud/playercrud/playercrud.component';
+import { NavComponent } from './nav/nav.component';
 
 
 @NgModule({
@@ -41,7 +40,6 @@ import { PlayercrudComponent } from './crud/playercrud/playercrud.component';
     PlayersComponent,
     WelcomeComponent,
     EventMainComponent,
-
     EventPlayersComponent,
     EventGamesComponent,
 
@@ -51,12 +49,14 @@ import { PlayercrudComponent } from './crud/playercrud/playercrud.component';
 
     PlayercrudComponent,
 
+    NavComponent,
+
   
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, FormsModule, AppRoutingModule, HttpClientModule,
     HttpClientModule,
-    MatButtonModule, MatButtonModule, MatGridListModule, MatOptionModule, MatSelectModule, MatTabsModule, 
+    MatToolbarModule, 
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule, // for database
   ],
