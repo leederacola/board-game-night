@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist\board-game-night",
+    "public": "dist/board-game-night",
     "ignore": [
       "firebase.json",
       "**/.*",
