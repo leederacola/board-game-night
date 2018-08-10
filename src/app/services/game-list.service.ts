@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database';
 import { Game } from '../models/game';
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
@@ -8,16 +10,59 @@ import { Game } from '../models/game';
 export class GameListService {
 
   private dbPath = '/games';
-
   gamesRef: AngularFireList<Game> = null;
-  gamesRef2: AngularFireList<Game> = null;
-  gameDetail: AngularFireList<Game>=null;
   g:Game = new Game();
 
-  constructor(private db: AngularFireDatabase) {
+  apiRoot: string = "https://localhost:44323/api/games/";
+
+
+  constructor(
+    private db: AngularFireDatabase,
+    private http: HttpClient
+    ) {
     this.getGamesList();
+    this.getAllGames();
+    this.getGameByID();
     //this.gamesRef = db.list(this.dbPath, data => data.orderByChild('title'));
    }
+
+   getAllGames() {
+     console.log("GET: all games");
+     let url = this.apiRoot;
+     this.http.get(this.apiRoot).subscribe(results => console.log(results));
+   }
+
+   getGameByID(){
+    console.log("GET: game by id");
+    let url = this.apiRoot;
+    this.http.get(this.apiRoot + "/1006").subscribe(results => console.log(results));
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   getGamesList(): AngularFireList<Game> {
     this.gamesRef =this.db.list(this.dbPath, data => data.orderByChild('title'));
