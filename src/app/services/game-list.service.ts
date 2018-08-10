@@ -22,6 +22,7 @@ export class GameListService {
     ) {
     this.getGamesList();
     this.getAllGames();
+    this.getGameByID();
     //this.gamesRef = db.list(this.dbPath, data => data.orderByChild('title'));
    }
 
@@ -34,7 +35,7 @@ export class GameListService {
    getGameByID(){
     console.log("GET: game by id");
     let url = this.apiRoot;
-    this.http.get(this.apiRoot).subscribe(results => console.log(results));
+    this.http.get(this.apiRoot + "/1006").subscribe(results => console.log(results));
    }
 
 
