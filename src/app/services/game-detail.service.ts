@@ -18,12 +18,12 @@ export class GameDetailService {
   }
 
   getGame(path: string): Observable<Game>{
-    console.log("inside detail service");
+ 
     this.itemRef = this.db.object(path);
     // set item to obserable
     this.item = this.itemRef.valueChanges();
     // subscribe to obserable set to Game
-    console.log("end detail service");
+
     return this.item;
     
   }
