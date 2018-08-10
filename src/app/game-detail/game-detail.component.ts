@@ -5,12 +5,13 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
 import { switchMap } from 'rxjs/operators';
 // my inports
-import { Person } from 'src/app/models/person';
+
 import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
 import { Game } from 'src/app/models/game';
 import { Observable } from 'rxjs';
 
-import { GameDetailService} from 'src/app/services/game-detail.service';
+
+import { GameListService } from '../services/game-list.service';
 
 @Component({
   selector: 'app-game-detail',
@@ -21,42 +22,32 @@ import { GameDetailService} from 'src/app/services/game-detail.service';
 
 export class GameDetailComponent implements OnInit {
 
-  
+
   @Input() game: Game;
-  path: string;
-  key: string;
-  itemRef: AngularFireObject<Game>; //db ref to 'item
   item: Observable<Game>; // retrieved 'item from db'
- 
-  
 
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    private detailService: GameDetailService,
-  ) {}
 
-    /***GetGame()
-      * subscribes to url param changes
-      * uses url key to call game-detail service getGame()
-      * getGame() returns obserable game
-      * subscribes to returned obserable<Game>
-      */
-   getGame(){
-    //get param and path
+    private gameService: GameListService
+  ) { }
+
+  getGameById() {
+    // get param and path
     this.route.paramMap.subscribe((params: ParamMap) => {
-      this.path = '/games/' + (params.get('key'));
-      // call getGame, subscribe
-       this.item =  this.detailService.getGame(this.path);
-       this.item.subscribe( g => this.game = g);
+      // convert to number
+      let id =+ (params.get("id"));
+      this.gameService.getGameById(id).subscribe(
+        result => this.game = result
+      );
     });
-   }
+  }
 
   ngOnInit() {
-   this.getGame();
+    this.getGameById();
   }
+}
 
-
-  }
 
 

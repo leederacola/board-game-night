@@ -1,25 +1,25 @@
-import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+// import { Injectable } from '@angular/core';
+// import { Observable, of } from 'rxjs';
 
-import { Person } from 'src/app/models/person';
-import { PEOPLE } from 'src/app/models/mock-persons';
+// import { Person } from 'src/app/models/person';
 
-import { MessageService } from './message.service';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class PersonService {
+// import { MessageService } from './message.service';
 
-  getPeople(): Observable<Person[]> {
-    this.messageService.add("GameService: fetched people");
-    return of (PEOPLE);
-  }
+// @Injectable({
+//   providedIn: 'root'
+// })
+// export class PersonService {
 
-  getPerson(id: number): Observable<Person>{
-    this.messageService.add('GameService: fetched game id=${id}');
-    return of(PEOPLE.find(person => person.id === id));
-  }
+//   getPeople(): Observable<Person[]> {
+//     this.messageService.add("GameService: fetched people");
+//     return of (PEOPLE);
+//   }
 
-  constructor(private messageService: MessageService) { }
-}
+//   getPerson(id: number): Observable<Person>{
+//     this.messageService.add('GameService: fetched game id=${id}');
+//     return of(PEOPLE.find(person => person.id === id));
+//   }
+
+//   constructor(private messageService: MessageService) { }
+// }

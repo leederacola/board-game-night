@@ -1,9 +1,11 @@
 export class Game{
-    key?: string;
-    id?:number;
+    // key?: string;
+    gameID?:number;
     title: string;
     minPlayer: number;
     maxPlayer: number;
     description?: string;
-    imagePath?: string;
+    imgPath?: string;
+    thumbPath?: string;
 }
+

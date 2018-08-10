@@ -2,7 +2,7 @@ import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { GamesComponent } from 'src/app/games/games.component';
-import { DashboardComponent } from 'src/app/dashboard/dashboard.component';
+// import { DashboardComponent } from 'src/app/dashboard/dashboard.component';
 import { GameDetailComponent } from 'src/app/game-detail/game-detail.component';
 import { EventGamesComponent} from 'src/app/event/event-games/event-games.component'
 import { EventPlayersComponent} from 'src/app/event/event-players/event-players.component';
@@ -18,8 +18,8 @@ const routes: Routes = [
   { path: 'games', component: GamesComponent },
   { path: 'welcome', component: WelcomeComponent },
 
-  { path: 'detail/:key', component: GameDetailComponent},
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'detail/:id', component: GameDetailComponent},
+  // { path: 'dashboard', component: DashboardComponent },
 
   // event router
 

@@ -7,7 +7,7 @@ import { HttpClientModule }    from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // my components
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+// import { DashboardComponent } from './dashboard/dashboard.component';
 import { PlayersComponent } from './players/players.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { GameDetailComponent } from './game-detail/game-detail.component';
@@ -34,7 +34,7 @@ import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
+    // DashboardComponent,
     GameDetailComponent,
     MessagesComponent,
     GamesComponent,
