@@ -21,15 +21,22 @@ export class GameListService {
     private http: HttpClient
     ) {
     this.getGamesList();
-    this.getGames();
+    this.getAllGames();
     //this.gamesRef = db.list(this.dbPath, data => data.orderByChild('title'));
    }
 
-   getGames() {
-     console.log("HTTP GET");
+   getAllGames() {
+     console.log("GET: all games");
      let url = this.apiRoot;
-     this.http.get(url).subscribe(results => console.log(results));
+     this.http.get(this.apiRoot).subscribe(results => console.log(results));
    }
+
+   getGameByID(){
+    console.log("GET: game by id");
+    let url = this.apiRoot;
+    this.http.get(this.apiRoot).subscribe(results => console.log(results));
+   }
+
 
 
 
