@@ -54,9 +54,11 @@ import { NavComponent } from './nav/nav.component';
   
   ],
   imports: [
-    BrowserModule, BrowserAnimationsModule, FormsModule, AppRoutingModule, HttpClientModule,
-    HttpClientModule,
+    // ng
+    BrowserModule, HttpClientModule, BrowserAnimationsModule, FormsModule, AppRoutingModule,
+    // material
     MatToolbarModule, 
+    // firebase
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule, // for database
   ],
