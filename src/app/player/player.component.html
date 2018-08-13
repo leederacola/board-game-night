@@ -1,0 +1,7 @@
+<h4>Player Component</h4>
+<!-- d -->
+
+<select [(ngModel)]="selectedPlayer">
+  <option *ngFor="let p of players" [ngValue]="p">{{p.name}}</option>
+</select>
+

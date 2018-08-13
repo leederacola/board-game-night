@@ -9,7 +9,7 @@
     <div class="games">
         <div *ngFor="let game of games"
           routerLink="/detail/{{game.gameID}}">
-          {{game.title}} 
+          {{game.title | slice:0:21}} 
           <span class="badge-min">{{game.minPlayer}}</span>
           <span class="badge-max">{{game.maxPlayer}}</span>
         </div>

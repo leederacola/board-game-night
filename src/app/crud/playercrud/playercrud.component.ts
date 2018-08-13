@@ -20,24 +20,24 @@ export class PlayercrudComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getAllPlayers();
+   
   }
 
 
-  createPlayer(): void {
-    let p = this.player;
-    this.playerService.createPlayer(p);
-    this.player = new Player();
-  }
+  // createPlayer(): void {
+  //   let p = this.player;
+  //   this.playerService.createPlayer(p);
+  //   this.player = new Player();
+  // }
   
-  getAllPlayers() {
-    // Use snapshotChanges().map() to store the key
-    this.playerService.getAllPlayers().snapshotChanges().pipe(
-      map(changes =>
-        changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
-      )
-    ).subscribe(players => {
-      this.allPlayers = players;
-    });
-  }
+  // getAllPlayers() {
+  //   // Use snapshotChanges().map() to store the key
+  //   this.playerService.getAllPlayers().snapshotChanges().pipe(
+  //     map(changes =>
+  //       changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
+  //     )
+  //   ).subscribe(players => {
+  //     this.allPlayers = players;
+  //   });
+  // }
 }
