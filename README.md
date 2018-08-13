@@ -1,6 +1,8 @@
 # BoardGameNight
 
 ## My Notes
+For MVC/API Testing use "game-model-changes" branch.  
+Master branch still connected to Firebase for basic Db.   
 https://trello.com/b/cuhKoYNx/angular-board-game-night 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
