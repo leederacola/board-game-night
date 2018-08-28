@@ -1,12 +1,18 @@
-<h5>My Games</h5>
+<h5>Game Library</h5>
+
+<div class="game-list-toggle">
+    <button class="btn">All</button>
+    <button class="btn">Event</button>
+    <button class="btn">Player</button>
+</div>
+
 
 <div class="vertical-menu">
     <div class="games">
-        <div *ngFor="let game of games"
-          routerLink="/detail/{{game.gameID}}">
-          {{game.title | slice:0:21}} 
-          <span class="badge-min">{{game.minPlayer}}</span>
-          <span class="badge-max">{{game.maxPlayer}}</span>
+        <div *ngFor="let game of games" routerLink="/detail/{{game.gameID}}">
+            {{game.title | slice:0:21}}
+            <span class="badge-min">{{game.minPlayer}}</span>
+            <span class="badge-max">{{game.maxPlayer}}</span>
         </div>
     </div>
 </div>

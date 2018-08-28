@@ -1,7 +1,16 @@
-<h4>Player Component</h4>
-<!-- d -->
+<div class="row">
 
-<select [(ngModel)]="selectedPlayer">
-  <option *ngFor="let p of players" [ngValue]="p">{{p.name}}</option>
-</select>
+  <div class="col">
+    <h5>Player:
+      <select [(ngModel)]="selectedPlayer">
+        <option *ngFor="let p of players" [ngValue]="p">{{p.name}}</option>
+      </select>
+    </h5>
+    <h6>upon selection hide box</h6>
+  </div>
 
+  <div class="col">
+    <img src='../../../assets/img/landscape-1478879153-die-hard.jpg'>
+  </div>
+
+</div>
