@@ -19,6 +19,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 import { PlayerComponent } from '../app/components/player/player.component';
 import { GameListComponent } from '../app/components/game-list/game-list.component';
+import { EventComponent } from './components/event/event.component';
 
 
 
@@ -32,6 +33,7 @@ import { GameListComponent } from '../app/components/game-list/game-list.compone
     NavComponent,
     PlayerComponent,
     GameListComponent,
+    EventComponent
 
 
   ],
