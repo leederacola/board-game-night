@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Player } from '../models/player';
-import { PlayerService } from '../services/player.service';
-import { DataFriendService } from '../data-friend.service';
+import { Player } from '../../models/player';
+import { PlayerService } from '../../services/player.service';
+import { DataFriendService } from '../../services/data-friend.service';
 
 @Component({
   selector: 'app-player',

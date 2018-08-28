@@ -11,7 +11,7 @@ import { Game } from 'src/app/models/game';
 import { Observable } from 'rxjs';
 
 
-import { GameListService } from '../services/game-list.service';
+import { GameListService } from '../../services/game-list.service';
 
 @Component({
   selector: 'app-game-detail',

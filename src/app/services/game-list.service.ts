@@ -16,7 +16,6 @@ export class GameListService {
   // gameList: Game[] = [];
   apiRoot: string = "https://localhost:44323/api/games/";
 
-
   constructor(
     // private db: AngularFireDatabase,
     private http: HttpClient
@@ -42,41 +41,11 @@ export class GameListService {
    }
 
 
-
-  // getGamesList(): AngularFireList<Game> {
-  //   this.gamesRef =this.db.list(this.dbPath, data => data.orderByChild('title'));
-  //   return this.gamesRef;
-  // }
-  // // oder all game by min player count 
-  // getGamesMin(playerCt: number): AngularFireList<Game> {
-  //   this.gamesRef = this.db.list(this.dbPath, data => data.orderByChild('minPlayer').startAt(playerCt));
-  //   return this.gamesRef;
-  // }
-  // // oder all game by max player count 
-  // getGamesMax(playerCt: number): AngularFireList<Game> {
-  //   this.gamesRef = this.db.list(this.dbPath, data => data.orderByChild('maxPlayer').startAt(playerCt));
-  //   return this.gamesRef;
-  // }
-
   // retrieve games that fit with in player count
   getEventGames(playerCt: number){
    //use multiple list? Add them?
   }
 
-
-//  createGame(game: Game): void {
-//     this.gamesRef.push(game);
-//   }
-//   deleteGame(key: string): void {
-//     this.gamesRef.remove(key).catch(error => this.handleError(error));
-//   }
-//   updateGame(key: string, value: any): void {
-//     this.gamesRef.update(key, value).catch(error => this.handleError(error));
-//   }
-  // getGamesByTitle(title: string) {
-  //   this.gamesRef = this.db.list(this.dbPath, data => data.orderByChild('title').equalTo(title));
-  // } 
- 
 
  
   private handleError(error) {
