@@ -27,6 +27,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 import { PlayerComponent } from './player/player.component';
+import { GameListComponent } from './game-list/game-list.component';
 
 
 
@@ -45,6 +46,7 @@ import { PlayerComponent } from './player/player.component';
     PlayercrudComponent,
     NavComponent,
     PlayerComponent,
+    GameListComponent,
 
   ],
   imports: [

@@ -6,13 +6,16 @@
 <hr> -->
 
     <app-nav></app-nav>
-    <app-player></app-player>
+
     <div class="container">
         <div class="row">
+                <div class="col-12 col-lg-2">
+                        <app-player></app-player>
+                    </div>
             <div class="col-12 col-lg-4">
-                <app-games></app-games>
+                <app-game-list></app-game-list>
             </div>
-            <div class="col-12 col-lg-8">
+            <div class="col-12 col-lg-6">
                 <router-outlet></router-outlet>
             </div>
         </div>
