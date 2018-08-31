@@ -15,20 +15,30 @@ export class GameListComponent implements OnInit {
 
   games: Game[] = [];
   playerCount: number;
+  selectedPlayerId: number;
 
   constructor(
     private gameService: GameListService,
-    private dataService: DataFriendService) { }
+    private dataService: DataFriendService) {
+      this.apiGameList();
+     }
 
     ngOnInit() {
-      this.apiGameList();
-      this.dataService.currentPlayerCount.subscribe(ct => this.playerCount = ct);
+      this.dataService.currentPlayerCount.subscribe(pId => this.selectedPlayerId = pId)
     }
 
     apiGameList() {
       this.gameService.getAllGames().subscribe(
-        //results => console.log(results)
         results => this.games = results
         );
     }
+
+
+    // getGamesByPlayerId(playerId: number){
+    // }
+    // getGamesByEventId(playerId: number){  
+    // }
+
+
+
   }

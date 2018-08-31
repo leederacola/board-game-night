@@ -12,22 +12,33 @@ export class PlayerComponent implements OnInit {
 
   players: Player[] = [];
   selectedPlayer: Player;
+  selectedplayerId: number;
 
   
   constructor(
     private playerService: PlayerService,
     private dataService: DataFriendService)
-     { }
+     { 
+      this.GetPlayerList();
+      
+     }
 
   ngOnInit() {
-    this.GetPlayerList();
+    this.dataService.currentPlayerCount.subscribe(pId => this.selectedplayerId = pId)
+  }
 
+
+  updateSharedPlayerId(){
+    console.log("shared player Id updated!");
+    this.selectedplayerId = this.selectedPlayer.playerID;
+    this.dataService.setSelectedPlayerId(this.selectedplayerId);
   }
 
   GetPlayerList() {
     this.playerService.getAllPlayers().subscribe(
-      result => this.players = result
-    )};
+      result => this.players = result   
+    )
+  };
 
 
 }

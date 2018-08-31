@@ -10,13 +10,12 @@ export class PlayerService {
   apiRoot: string = "https://localhost:44323/api/players/";
 
   constructor(private http: HttpClient) {
-    this.getAllPlayers();
    }
 
   getAllPlayers(): Observable<Player[]> {
-    console.log("GET: all games called");
     let url = this.apiRoot;
     var result = this.http.get<Player[]>(url);
+    console.log("GET: all players called");
     return result;
   }
 

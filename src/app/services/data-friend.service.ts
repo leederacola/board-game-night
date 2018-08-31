@@ -5,13 +5,14 @@ import {BehaviorSubject} from 'rxjs';
 })
 export class DataFriendService {
   
-  private playerCountSource = new BehaviorSubject(0);
+  private playerCountSource = new BehaviorSubject(null);
   currentPlayerCount = this.playerCountSource.asObservable();
 
   constructor() { }
 
-  changePlayerCount(playerCount: number) {
-    this.playerCountSource.next(playerCount)
+
+  setSelectedPlayerId(playerId: number) {
+    this.playerCountSource.next(playerId)
   }
 
 

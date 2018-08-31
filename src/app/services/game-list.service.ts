@@ -11,20 +11,12 @@ import { Observable } from '../../../node_modules/rxjs';
 export class GameListService {
 
   private dbPath = '/games';
-  // gamesRef: AngularFireList<Game> = null;
-  // g:Game = new Game();
-  // gameList: Game[] = [];
+
   apiRoot: string = "https://localhost:44323/api/games/";
 
   constructor(
-    // private db: AngularFireDatabase,
     private http: HttpClient
-    ) {
-    // this.getGamesList();
-    this.getAllGames();
-    // this.getGameByID();
-    //this.gamesRef = db.list(this.dbPath, data => data.orderByChild('title'));
-   }
+    ) {}
 
    getAllGames(): Observable<Game[]> {
      console.log("GET: all games called");
@@ -34,7 +26,7 @@ export class GameListService {
    }
 
    getGameById(id : number): Observable<Game> {
-    console.log("GET: game by id");
+    console.log("GET: game by id called");
     let url = this.apiRoot;
     var game = this.http.get<Game>(this.apiRoot + id);
     return game;
