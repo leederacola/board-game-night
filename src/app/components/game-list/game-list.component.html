@@ -1,9 +1,9 @@
 <h5>Game Library</h5>
 
 <div class="game-list-toggle">
-    <button class="btn">All</button>
+    <button class="btn" (click)="apiGameList()">All</button>
     <button class="btn">Event</button>
-    <button class="btn">Player: {{selectedPlayerId}}</button>
+    <button class="btn" (click)="GetPlayerGames()">Player: {{selectedPlayerId}}</button>
 </div>
 
 

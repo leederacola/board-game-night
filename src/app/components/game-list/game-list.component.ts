@@ -33,6 +33,14 @@ export class GameListComponent implements OnInit {
         );
     }
 
+    GetPlayerGames(){
+      console.log("get player games from component called");
+      let playerId = this.selectedPlayerId;
+      this.gameService.getPlayerGames(playerId).subscribe(
+        results => this.games = results
+      );
+    }
+
 
     // getGamesByPlayerId(playerId: number){
     // }

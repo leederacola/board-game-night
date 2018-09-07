@@ -19,24 +19,26 @@ export class GameListService {
     ) {}
 
    getAllGames(): Observable<Game[]> {
-     console.log("GET: all games called");
+     // Get: api/games/
      let url = this.apiRoot;
      var result = this.http.get<Game[]>(url);     
      return result;
    }
 
    getGameById(id : number): Observable<Game> {
-    console.log("GET: game by id called");
-    let url = this.apiRoot;
+     // Get: api/games/id
     var game = this.http.get<Game>(this.apiRoot + id);
     return game;
    }
 
+   getPlayerGames(playerId: number): Observable<Game[]> {
+    // Get: api/games/player/playerId
+    let api = (this.apiRoot + 'player/' + playerId);
+    var result = this.http.get<Game[]>(api);
+    return result;
+   }
 
-  // retrieve games that fit with in player count
-  getEventGames(playerCt: number){
-   //use multiple list? Add them?
-  }
+
 
 
  
