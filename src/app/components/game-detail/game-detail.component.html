@@ -1,0 +1,18 @@
+<div *ngIf="game">
+  <div class="row">
+    <div class="col-12 col-md-5">
+        <h1>{{game.title}}</h1>
+       
+        <h4>Min Player: {{game.minPlayer}}</h4>
+        <h4>Max Player: {{game.maxPlayer}}</h4>
+        <h6>Description: {{game.description}}</h6>
+    </div>
+    <div class="col-12 col-md-7">
+        <img src="{{game.imgPath}}" class="img-fluid" alt="Responsive image" />
+    </div>
+
+  </div>
+</div>
+
+
+<a routerLink=""> <button>home/notes/reload</button></a>

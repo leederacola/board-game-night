@@ -1,8 +1,6 @@
 import {Game} from "src/app/models/game";
 
 export class Player{
-    key: string;
+    playerID: number;
     name: string;
-    imgPath: string;
-    library?: Game[];
 }

@@ -1,16 +1,21 @@
-
-<!-- 
-
-<div class="container">
-    <app-event-main></app-event-main>
-<hr> -->
-
-    <app-nav></app-nav>
+<app-nav></app-nav>
 
 <div class="container">
     <div class="row">
+        <div class="col">
+            <app-event></app-event>
+        </div>
+
+        <div class="col">
+            <app-player></app-player>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
         <div class="col-12 col-lg-4">
-            <app-games></app-games>
+            <app-game-list></app-game-list>
         </div>
         <div class="col-12 col-lg-8">
             <router-outlet></router-outlet>
@@ -18,6 +23,5 @@
     </div>
 
 </div>
-  
-<!-- </div> -->
 
+<!-- </div> -->
