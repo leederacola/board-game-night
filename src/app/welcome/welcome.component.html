@@ -1,32 +1,36 @@
 <h1>Welcome to Board Game Night</h1>
 <h4> What is it?</h4>
 <ul>
-  <li>Board Game Library Manager and EWvent Planner</li>
+  <li>Board Game Library Manager and Event Planner</li>
   <li>My firends can RSVP to Game Night</li>
   <li>RSVP'd players game libraries will pooled together</li>
   <li>Attending Players will vote on available games to play</li>
 </ul>
 
 <h4>What is It Currently?</h4>
-<ul>
-  <li>Game-list component & Game-detail component</li>
-  <li>Click a game & get the detailed view</li>
-  <li>Application is hosted with Google Firebase</li>
-  <li>Game data hosted with Firebase Real Time Database </li>
-  <li>lots of currently unused code organized poorly -will fix</li>
+<h5>Hosted branch is trial using Google Firebase RealTime Database</h5>
+<h5>Currently developing SQL db .NET api backend</h5>
+<h5>Branch "event-model" is updated angular that connects to .net web api </h5>
+  <ul>
+  <li>basic SQL database created, Player/Game/PlayerGames</li>
+  <li>controllers and api controllers working with angular http calls</li>
+  <li>repository/api calls currently  - all games, all players, games by players</li>
+  <li>currently using scaffolding for admin functions on .net side</li>
 </ul>
 
 
 
 <h4>Current Work in Progress</h4> 
-<h6>notes so I can host an unfinished project for intrested parties to see that I put that work in! Hire Me</h6> 
+<h6>notes so I can host an unfinished project for intrested parties to see that I put that work in!</h6> 
 <ul>
-  <li>.Net Core - working on implementing repository pattern for existing controllers</li>
-  <li>.Net Core - SQL database, currently a LocalDb - no idea how to host it yet.</li>
-  <li>.Net Core - mostly repositoty work on dotnet side</li>
-  <li>Angular 6 - re-deploy this app with basic functionality until can connect the two</li>
+  <li>Add Event to db (event/eventGames/EventPlayers)</li>
+  <li>scaffold controllers for admin - to be prettiers up later</li>
+  <li>interface/repository work</li>
+  <li>Event component - get list of events, get (past or upcommimng) list</li>
+  <li>add filter to game-list component based on selected event</li>
+  <li>filter games by player libraries and event player counts</li>
   <li>
-    <a href="https://github.com/leederacola/board-game-night" target="blank">Boarg Game Night! Github Repository</a>
+    <a href="https://github.com/leederacola/board-game-night" target="blank">Board Game Night! Github Repository</a>
   </li>
   <li>
     <a href="https://github.com/leederacola/Core-MVC-API" target="blank">Net Core MVC Admin / Web API Github Repository </a>
