@@ -1,10 +1,10 @@
 export class Game{
     // key?: string;
-    gameID?:number;
+    gameId?:number;
     title: string;
     minPlayer: number;
     maxPlayer: number;
-    description?: string;
+    detail?: string;
     imgPath?: string;
     thumbPath?: string;
 }

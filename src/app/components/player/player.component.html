@@ -3,11 +3,11 @@
   <div class="col">
     <h5>Player:
       <select (change)="updateSharedPlayerId($event)" [(ngModel)]="selectedPlayer">
-        <option *ngFor="let p of players" [ngValue]="p">{{p.name}}</option>
+        <option *ngFor="let p of players" [ngValue]="p">{{p.playerName}}</option>
       </select>
     </h5>
 
-    <h6 *ngIf="selectedPlayer">{{selectedPlayer.name}} | {{selectedPlayer.playerID}}</h6>
+    <h6 *ngIf="selectedPlayer">{{selectedPlayer.playerName}} | {{selectedPlayer.playerId}}</h6>
     <h6>selectedPlayerId: {{selectedplayerId}}</h6> 
   </div>
 

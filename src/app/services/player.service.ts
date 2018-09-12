@@ -7,7 +7,7 @@ import { Observable } from '../../../node_modules/rxjs';
   providedIn: 'root'
 })
 export class PlayerService {  
-  apiRoot: string = "https://localhost:44323/api/players/";
+  apiRoot: string = "http://localhost:33031/api/players";
 
   constructor(private http: HttpClient) {
    }

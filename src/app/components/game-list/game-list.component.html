@@ -9,7 +9,7 @@
 
 <div class="vertical-menu">
     <div class="games">
-        <div *ngFor="let game of games" routerLink="/detail/{{game.gameID}}">
+        <div *ngFor="let game of games" routerLink="/detail/{{game.gameId}}">
             {{game.title | slice:0:21}}
             <span class="badge-min">{{game.minPlayer}}</span>
             <span class="badge-max">{{game.maxPlayer}}</span>

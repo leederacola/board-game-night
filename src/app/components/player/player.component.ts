@@ -30,7 +30,7 @@ export class PlayerComponent implements OnInit {
 
   updateSharedPlayerId(){
     console.log("shared player Id updated!");
-    this.selectedplayerId = this.selectedPlayer.playerID;
+    this.selectedplayerId = this.selectedPlayer.playerId;
     this.dataService.setSelectedPlayerId(this.selectedplayerId);
   }
 

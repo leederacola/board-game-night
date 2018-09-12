@@ -12,7 +12,7 @@ export class GameListService {
 
   private dbPath = '/games';
 
-  apiRoot: string = "https://localhost:44323/api/games/";
+  apiRoot: string = "http://localhost:33031/api/games/";
 
   constructor(
     private http: HttpClient
